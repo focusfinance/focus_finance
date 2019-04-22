@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>3 Aula 2 | Uma breve Explicação</title>
+  <meta name="description" content="3 Aula 2 | Uma breve Explicação">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="3 Aula 2 | Uma breve Explicação" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 Aula 2 | Uma breve Explicação" />
+  
+  
+  
+
+<meta name="author" content="Vítor Salgado">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="aula-1.html">
+<link rel="next" href="aula-3.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introdução</a></li>
+<li class="chapter" data-level="2" data-path="aula-1.html"><a href="aula-1.html"><i class="fa fa-check"></i><b>2</b> Aula 1</a><ul>
+<li class="chapter" data-level="2.1" data-path="aula-1.html"><a href="aula-1.html#o-que-e-o-r"><i class="fa fa-check"></i><b>2.1</b> O que é o R?</a></li>
+<li class="chapter" data-level="2.2" data-path="aula-1.html"><a href="aula-1.html#instalando-r"><i class="fa fa-check"></i><b>2.2</b> Instalando R</a></li>
+<li class="chapter" data-level="2.3" data-path="aula-1.html"><a href="aula-1.html#o-r-como-calculadora"><i class="fa fa-check"></i><b>2.3</b> O R como calculadora</a></li>
+<li class="chapter" data-level="2.4" data-path="aula-1.html"><a href="aula-1.html#funcoes-do-r"><i class="fa fa-check"></i><b>2.4</b> Funções do R:</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="aula-1.html"><a href="aula-1.html#exemplo-1"><i class="fa fa-check"></i><b>2.4.1</b> exemplo 1</a></li>
+<li class="chapter" data-level="2.4.2" data-path="aula-1.html"><a href="aula-1.html#exemplo-2"><i class="fa fa-check"></i><b>2.4.2</b> exemplo 2</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="aula-1.html"><a href="aula-1.html#algumas-funcoes-basicas-uteis"><i class="fa fa-check"></i><b>2.5</b> Algumas funções básicas úteis:</a></li>
+<li class="chapter" data-level="2.6" data-path="aula-1.html"><a href="aula-1.html#tipos-de-variaveis"><i class="fa fa-check"></i><b>2.6</b> TIPOS DE VARIÁVEIS</a></li>
+<li class="chapter" data-level="2.7" data-path="aula-1.html"><a href="aula-1.html#objetos-do-r-o-que-sao"><i class="fa fa-check"></i><b>2.7</b> Objetos do R (O que são?):</a></li>
+<li class="chapter" data-level="2.8" data-path="aula-1.html"><a href="aula-1.html#acessar-valores-dentro-de-um-objeto-colchetes"><i class="fa fa-check"></i><b>2.8</b> Acessar valores dentro de um objeto [colchetes]</a><ul>
+<li class="chapter" data-level="2.8.1" data-path="aula-1.html"><a href="aula-1.html#exemplo"><i class="fa fa-check"></i><b>2.8.1</b> exemplo:</a></li>
+</ul></li>
+<li class="chapter" data-level="2.9" data-path="aula-1.html"><a href="aula-1.html#matrizes"><i class="fa fa-check"></i><b>2.9</b> Matrizes</a><ul>
+<li class="chapter" data-level="2.9.1" data-path="aula-1.html"><a href="aula-1.html#exercicios"><i class="fa fa-check"></i><b>2.9.1</b> Exercicios:</a></li>
+<li class="chapter" data-level="2.9.2" data-path="aula-1.html"><a href="aula-1.html#alguns-comandos-basicos-uteis"><i class="fa fa-check"></i><b>2.9.2</b> Alguns comandos básicos úteis:</a></li>
+</ul></li>
+<li class="chapter" data-level="2.10" data-path="aula-1.html"><a href="aula-1.html#referencias"><i class="fa fa-check"></i><b>2.10</b> Referências</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="aula-2.html"><a href="aula-2.html"><i class="fa fa-check"></i><b>3</b> Aula 2</a><ul>
+<li class="chapter" data-level="3.1" data-path="aula-2.html"><a href="aula-2.html#factor"><i class="fa fa-check"></i><b>3.1</b> Factor</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="aula-2.html"><a href="aula-2.html#exemplo-1-1"><i class="fa fa-check"></i><b>3.1.1</b> Exemplo 1</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="aula-2.html"><a href="aula-2.html#pacotes-packages"><i class="fa fa-check"></i><b>3.2</b> Pacotes (packages)</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="aula-2.html"><a href="aula-2.html#exemplo-2-1"><i class="fa fa-check"></i><b>3.2.1</b> exemplo 2</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="aula-2.html"><a href="aula-2.html#referencias-1"><i class="fa fa-check"></i><b>3.3</b> Referências</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="aula-3.html"><a href="aula-3.html"><i class="fa fa-check"></i><b>4</b> Aula 3</a><ul>
+<li class="chapter" data-level="4.1" data-path="aula-3.html"><a href="aula-3.html#estatistica-descritiva"><i class="fa fa-check"></i><b>4.1</b> Estatística descritiva</a></li>
+<li class="chapter" data-level="4.2" data-path="aula-3.html"><a href="aula-3.html#selecao-condicional"><i class="fa fa-check"></i><b>4.2</b> Seleção Condicional</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="aula-3.html"><a href="aula-3.html#selecao-condicional-em-vetores"><i class="fa fa-check"></i><b>4.2.1</b> Seleção condicional em vetores</a></li>
+<li class="chapter" data-level="4.2.2" data-path="aula-3.html"><a href="aula-3.html#a-funcao-which"><i class="fa fa-check"></i><b>4.2.2</b> A função which()</a></li>
+<li class="chapter" data-level="4.2.3" data-path="aula-3.html"><a href="aula-3.html#selecao-condicional-em-data-frames"><i class="fa fa-check"></i><b>4.2.3</b> Seleção condicional em data frames</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="aula-1.html"><a href="aula-1.html#exercicios"><i class="fa fa-check"></i><b>4.3</b> Exercícios</a></li>
+<li class="chapter" data-level="4.4" data-path="aula-3.html"><a href="aula-3.html#condicoes-no-r"><i class="fa fa-check"></i><b>4.4</b> Condições no R</a></li>
+<li class="chapter" data-level="4.5" data-path="aula-3.html"><a href="aula-3.html#referencias-2"><i class="fa fa-check"></i><b>4.5</b> Referências</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="aula-4.html"><a href="aula-4.html"><i class="fa fa-check"></i><b>5</b> Aula 4</a><ul>
+<li class="chapter" data-level="5.1" data-path="aula-4.html"><a href="aula-4.html#probabilidade-distribuicao-de-probabilidade-e-o-teste-t"><i class="fa fa-check"></i><b>5.1</b> Probabilidade, Distribuição de probabilidade e o teste t</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="aula-4.html"><a href="aula-4.html#probabilidade"><i class="fa fa-check"></i><b>5.1.1</b> Probabilidade</a></li>
+<li class="chapter" data-level="5.1.2" data-path="aula-4.html"><a href="aula-4.html#experimento-aleatorio"><i class="fa fa-check"></i><b>5.1.2</b> Experimento aleatório</a></li>
+<li class="chapter" data-level="5.1.3" data-path="aula-4.html"><a href="aula-4.html#ponto-amostral"><i class="fa fa-check"></i><b>5.1.3</b> Ponto amostral</a></li>
+<li class="chapter" data-level="5.1.4" data-path="aula-4.html"><a href="aula-4.html#espaco-amostral"><i class="fa fa-check"></i><b>5.1.4</b> Espaço amostral</a></li>
+<li class="chapter" data-level="5.1.5" data-path="aula-4.html"><a href="aula-4.html#evento"><i class="fa fa-check"></i><b>5.1.5</b> Evento</a></li>
+<li class="chapter" data-level="5.1.6" data-path="aula-4.html"><a href="aula-4.html#espacos-equiprovaveis"><i class="fa fa-check"></i><b>5.1.6</b> Espaços equiprováveis</a></li>
+<li class="chapter" data-level="5.1.7" data-path="aula-4.html"><a href="aula-4.html#calculo-de-probabilidades"><i class="fa fa-check"></i><b>5.1.7</b> Cálculo de probabilidades</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="aula-4.html"><a href="aula-4.html#combinatoria"><i class="fa fa-check"></i><b>5.2</b> Combinatória</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="aula-4.html"><a href="aula-4.html#fatorial"><i class="fa fa-check"></i><b>5.2.1</b> Fatorial</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="aula-4.html"><a href="aula-4.html#distribuicao-de-probabilidade"><i class="fa fa-check"></i><b>5.3</b> Distribuição de probabilidade</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="aula-4.html"><a href="aula-4.html#distribuicao"><i class="fa fa-check"></i><b>5.3.1</b> Distribuição</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="aula-4.html"><a href="aula-4.html#exercicios-1"><i class="fa fa-check"></i><b>5.4</b> Exercicios</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="aula-4.html"><a href="aula-4.html#consultoria-sobre-investimentos"><i class="fa fa-check"></i><b>5.4.1</b> Consultoria sobre investimentos</a></li>
+<li class="chapter" data-level="5.4.2" data-path="aula-4.html"><a href="aula-4.html#queda-na-bolsa"><i class="fa fa-check"></i><b>5.4.2</b> Queda na Bolsa</a></li>
+<li class="chapter" data-level="5.4.3" data-path="aula-4.html"><a href="aula-4.html#teste-t"><i class="fa fa-check"></i><b>5.4.3</b> Teste t</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="aula-4.html"><a href="aula-4.html#referencias-3"><i class="fa fa-check"></i><b>5.5</b> Referências</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="aula-5.html"><a href="aula-5.html"><i class="fa fa-check"></i><b>6</b> Aula 5</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Uma breve Explicação</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="aula-2" class="section level1">
+<h1><span class="header-section-number">3</span> Aula 2</h1>
+<div id="factor" class="section level2">
+<h2><span class="header-section-number">3.1</span> Factor</h2>
+<p>Na aula 1 quando falamos sobre tipos de variáveis falamos sobre as variáveis categoricas ou variáveis qualitativas ou seja, características dos indivíduos para as quais não é possível atribuir um valor numérico, como sexo, religião, estado civil, opinião sobre algum tema. É possível agrupar os indivíduos em categorias e contar quantos indivíduos pertencem a cada categoria, mas se, por exemplo, um indivíduo afirma ser católico, e outro, protestante, não podemos, com base nessas afirmações, considerar um mais religioso do que o outro.</p>
+<p>Logo mais falaremos das categóricas ordenáveis(ordered) um tipo de variável categórica cujas categorias podem ser hierarquizáveis, como grau de escolaridade.</p>
+<div id="exemplo-1-1" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> Exemplo 1</h3>
+<p>Digamos que ao navegar pelos estudos do economatica encontramos essa noticia: 30 maiores empresas de capital aberto da América Latina por receita líquida operacional (Vendas). (link do estudo <a href="https://economatica.com/estudos/data/20160513b.pdf" class="uri">https://economatica.com/estudos/data/20160513b.pdf</a>) E venha a dúvida, de quais países são essas empresas?</p>
+<p>Primeiro temos que importar os dados da pesquisa,</p>
+<p>utilizaremos read.csv por que nosso arquivo esta salvo como um arquivo do tipo csv, são arquivos de texto plano, podendo ser visualizados em editores de texto simples porque não contêm qualquer formatação especial, como negrito, itálico, cores, espaçamento entre linhas etc. . . Apesar do nome, devido ao fato da vírgula ser um símbolo comum em textos, inclusive nos valores de variáveis categóricas, e, principalmente, por ser a vírgula o separador de decimais em alguns idiomas, como o português, na prática, é comum encontrar arquivos csv com os campos separados por ponto e vírgula, espaços e caracteres de tabulação. Para eliminar qualquer dúvida sobre o tipo de valor de um campo, se numérico ou textual, costuma-se escrever os valores que devem ser tratados como texto entre aspas, simples ou duplas. é por isso que no excel quando salvamos um arquivo em csv ele acusa que vamos perder algumas informações. Perde-se toda informação sobre formatação das células e sobre fórmulas utilizadas.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#importando os dados</span>
+maiores_emp &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;Pasta1.csv&quot;</span>)
+maiores_emp</code></pre></div>
+<pre><code>##               Posicao.Nome.Pais
+## 1            1;Petrobras;Brasil
+## 2        2;America Movil;México
+## 3                  3;JBS;Brasil
+## 4   4;Wal Mart de Mexico;México
+## 5                 5;Vale;Brasil
+## 6             6;Ultrapar;Brasil
+## 7                 7;Copec;Chile
+## 8    8;Formento Econ Mex;México
+## 9        9;P. Açucar-Cbd;Brasil
+## 10        10;Ecopetrol;Colômbia
+## 11            11;Cencosud;Chile
+## 12               12;Alfa;México
+## 13              13;Cemex;México
+## 14              14;Bimbo;México
+## 15            15;Braskem;Brasil
+## 16          16;Ambev S/A;Brasil
+## 17             17;Ypf;Argentina
+## 18             18;Gerdau;Brasil
+## 19           19;Falabella;Chile
+## 20            20;Exito;Colômbia
+## 21       21;Telef Brasil;Brasil
+## 22           22;Lan Chile;Chile
+## 23    23;Coca Cola Femsa;México
+## 24          24;Eletrobas;México
+## 25            25;BRF S.A;Brasil
+## 26           26;G.Mexico;México
+## 27    27;Tenaris S.A.;Argentina
+## 28                 28;Oi;Brasil
+## 29 29;Inretail Peru Corp. ;Peru
+## 30          30;Enersis-Am;Chile</code></pre>
+<p>Observe que o R reconheceu as linhas mas não separou as colunas,</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">nrow</span>(maiores_emp)   <span class="co">#numero de linhas</span></code></pre></div>
+<pre><code>## [1] 30</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ncol</span>(maiores_emp)   <span class="co">#numero de colunas</span></code></pre></div>
+<pre><code>## [1] 1</code></pre>
+<p>porém olhe isto - 1;Petrobras;Brasil - 1 deveria estar na coluna posição, petrobras na coluna nome e Brasil na coluna país, os três termos estão separados por ponto e virgula e é exatamente isso que vamos dizer ao R agora.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">maiores_emp &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;Pasta1.csv&quot;</span>, <span class="dt">sep =</span> <span class="st">&quot;;&quot;</span>, <span class="dt">header =</span> T)</code></pre></div>
+<p>Alguns separadores usados são a virgula, o ponto e virgula, TAB e o Espaço. o argumento <code>sep</code> indica qual o separador do arquivo. Lembrando que o separador deve estar entre aspas.</p>
+<p>O argumento <code>header=TRUE</code> informa que os dados possuem cabeçalho, ou seja, a primeira linha contém os nomes dos atributos (variáveis) e a primeira coluna possui o nome das amostras.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#visualizando o objeto maiores_emp</span>
+maiores_emp</code></pre></div>
+<pre><code>##    Posicao                 Nome      Pais
+## 1        1            Petrobras    Brasil
+## 2        2        America Movil    México
+## 3        3                  JBS    Brasil
+## 4        4   Wal Mart de Mexico    México
+## 5        5                 Vale    Brasil
+## 6        6             Ultrapar    Brasil
+## 7        7                Copec     Chile
+## 8        8    Formento Econ Mex    México
+## 9        9        P. Açucar-Cbd    Brasil
+## 10      10            Ecopetrol  Colômbia
+## 11      11             Cencosud     Chile
+## 12      12                 Alfa    México
+## 13      13                Cemex    México
+## 14      14                Bimbo    México
+## 15      15              Braskem    Brasil
+## 16      16            Ambev S/A    Brasil
+## 17      17                  Ypf Argentina
+## 18      18               Gerdau    Brasil
+## 19      19            Falabella     Chile
+## 20      20                Exito  Colômbia
+## 21      21         Telef Brasil    Brasil
+## 22      22            Lan Chile     Chile
+## 23      23      Coca Cola Femsa    México
+## 24      24            Eletrobas    México
+## 25      25              BRF S.A    Brasil
+## 26      26             G.Mexico    México
+## 27      27         Tenaris S.A. Argentina
+## 28      28                   Oi    Brasil
+## 29      29 Inretail Peru Corp.       Peru
+## 30      30           Enersis-Am     Chile</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#visualizando o tipo do objeto</span>
+<span class="kw">class</span>(maiores_emp)</code></pre></div>
+<pre><code>## [1] &quot;data.frame&quot;</code></pre>
+<p><code>maiores_emp</code> é um objeto do tipo data.frame, isso quer dizer que <code>maiores_emp</code> é um objeto que possui linhas e colunas (observações nas linhas e variáveis (atributos) nas colunas). Assim como uma matrix, todas as colunas de um data.frame têm que ter o mesmo número de elementos, mas, ao contrário de uma matrix, um data.frame pode conter colunas de tipos diferentes, com variáveis numéricas, categóricas, booleanas etc. Todas as operações válidas para vetores também podem ser aplicadas às colunas de um data.frame e todas as formas de acessar valores em uma matrix são validos para o data.frame.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(maiores_emp<span class="op">$</span>Pais)</code></pre></div>
+<pre><code>## [1] &quot;factor&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(maiores_emp<span class="op">$</span>Nome)</code></pre></div>
+<pre><code>## [1] &quot;factor&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(maiores_emp<span class="op">$</span>Posicao)</code></pre></div>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<p>Até aqui,sempre que precisamos fazer referência a uma variável de um banco de dados, usamos a notação maiores_empcifrãoPias, onde maiores_emp representa um data.frame e Pais uma de suas colunas ou variáveis. A função attach() permite fazer referência a uma variável de um banco de dados diretamente, sem o prefixo maiores_empcifrão. Ao digitarmos attach(maiores_emp), o R faz cópias das variáveis de maiores_emp que, embora não sejam exibidas pela função ls(), podem ser acessadas pelas demais funções. O inconveniente de usar attach() durante o processo de manipulação dos dados decorre do fato de alterações nos objetos anexados à área de trabalho não se refletirem nas variáveis do data.frame() e vice-versa. Seria preciso usar, constantemente, a função detach() para desanexar os objetos anexados pela última chamada a attach().</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">attach</span>(maiores_emp)</code></pre></div>
+<pre><code>## The following objects are masked from maiores_emp (pos = 3):
+## 
+##     Nome, Pais, Posicao</code></pre>
+<pre><code>## The following objects are masked from maiores_emp (pos = 4):
+## 
+##     Nome, Pais, Posicao</code></pre>
+<pre><code>## The following objects are masked from maiores_emp (pos = 5):
+## 
+##     Nome, Pais, Posicao</code></pre>
+<pre><code>## The following objects are masked from maiores_emp (pos = 6):
+## 
+##     Nome, Pais, Posicao</code></pre>
+<pre><code>## The following objects are masked from maiores_emp (pos = 7):
+## 
+##     Nome, Pais, Posicao</code></pre>
+<pre><code>## The following objects are masked from maiores_emp (pos = 8):
+## 
+##     Nome, Pais, Posicao</code></pre>
+<pre><code>## The following objects are masked from maiores_emp (pos = 9):
+## 
+##     Nome, Pais, Posicao</code></pre>
+<pre><code>## The following objects are masked from maiores_emp (pos = 10):
+## 
+##     Nome, Pais, Posicao</code></pre>
+<pre><code>## The following objects are masked from maiores_emp (pos = 11):
+## 
+##     Nome, Pais, Posicao</code></pre>
+<pre><code>## The following objects are masked from maiores_emp (pos = 18):
+## 
+##     Nome, Pais, Posicao</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">factor</span>(Pais)</code></pre></div>
+<pre><code>##  [1] Brasil    México    Brasil    México    Brasil    Brasil    Chile    
+##  [8] México    Brasil    Colômbia  Chile     México    México    México   
+## [15] Brasil    Brasil    Argentina Brasil    Chile     Colômbia  Brasil   
+## [22] Chile     México    México    Brasil    México    Argentina Brasil   
+## [29] Peru      Chile    
+## Levels: Argentina Brasil Chile Colômbia México Peru</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(Pais)</code></pre></div>
+<pre><code>##  Factor w/ 6 levels &quot;Argentina&quot;,&quot;Brasil&quot;,..: 2 5 2 5 2 2 3 5 2 4 ...</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">levels</span>(Pais)</code></pre></div>
+<pre><code>## [1] &quot;Argentina&quot; &quot;Brasil&quot;    &quot;Chile&quot;     &quot;Colômbia&quot;  &quot;México&quot;    &quot;Peru&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(Pais)</code></pre></div>
+<pre><code>## Argentina    Brasil     Chile  Colômbia    México      Peru 
+##         2        11         5         2         9         1</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pie</span>(<span class="kw">summary</span>(Pais), <span class="dt">main=</span><span class="st">&quot;Onde estão as maiores empresas da américa&quot;</span>)</code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<hr />
+</div>
+</div>
+<div id="pacotes-packages" class="section level2">
+<h2><span class="header-section-number">3.2</span> Pacotes (packages)</h2>
+<p>O R é um programa leve (ocupa pouco espaço e memória) e geralmente roda rápido, até em computadores não muito bons. Isso porque ao instalarmos o R apenas as configurações mínimas para seu funcionamento básico são instaladas (pacotes que vem na instalação “base”). Para realizar tarefas mais complicadas pode ser necessário instalar pacotes adicionais (packages). Existem vários pacotes, para diferentes áreas. Para os economistas, além do pacote de econometria, os pacotes de Time Series, Bayesian, Finance, Machine Learning podem ser de interesse.</p>
+<p>O R também pode conectar-se diretamente à internet. Desta forma é possível, instalar e atualizar pacotes sem que seja necessário acessar a página do R.</p>
+<p>O grande atrativo do R são os pacotes. Para instalar um pacote, basta digitar no console: install.packages(“nome-do-pacote”)</p>
+<p>Um pacote bastante utilizado em finanças é o <code>quantmod</code>.</p>
+<div id="exemplo-2-1" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> exemplo 2</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#instalando o pacote</span>
+<span class="kw">install.packages</span>(<span class="st">&quot;quantmod&quot;</span>)</code></pre></div>
+<p>Não basta apenas instalar um pacote. Para usá-lo é necessário “carregar” o pacote sempre que você abrir o R e for usá-lo. Use a função library para rodar um pacote.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#carregando o pacote</span>
+<span class="kw">library</span>(quantmod)</code></pre></div>
+<p>Após isso as funcionalidades do quantmod estarão prontas para serem usadas. Lembre-se que sempre que abrir o R será necessário carregar o pacote novamente.</p>
+<p>Vamos agora testar algumas funcionalidades desse pacote (quantmod).</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">getSymbols</span>(<span class="st">&quot;BTOW3.SA&quot;</span>, <span class="dt">src =</span> <span class="st">&quot;yahoo&quot;</span>, <span class="dt">from=</span> <span class="st">&quot;2018-01-01&quot;</span>, <span class="dt">to=</span><span class="st">&quot;2018-09-08&quot;</span> )</code></pre></div>
+<pre><code>## [1] &quot;BTOW3.SA&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">getSymbols</span>(<span class="st">&quot;MGLU3.SA&quot;</span>, <span class="dt">src =</span> <span class="st">&quot;yahoo&quot;</span>, <span class="dt">from=</span> <span class="st">&quot;2018-01-01&quot;</span>, <span class="dt">to=</span><span class="st">&quot;2018-09-08&quot;</span> )</code></pre></div>
+<pre><code>## [1] &quot;MGLU3.SA&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">candleChart</span>(BTOW3.SA, <span class="dt">name =</span> <span class="st">&quot;B2W&quot;</span>)</code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">candleChart</span>(MGLU3.SA, <span class="dt">name =</span> <span class="st">&quot;Magazine Luiza&quot;</span>)</code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-24-2.png" width="672" /></p>
+<p><code>getSymbols()</code> e <code>candleChart()</code> são funções do pacote quantmod. Caso você tenha interesse em melhorar o gráfico você pode buscar o Help do R.</p>
+<p>Para ver os arquivos de ajuda do R use o comando help(nome.da.função) ou ?nome.da.funcão.</p>
+<p>Geralmente, o arquivo de help do R possui 10 tópicos básicos: 1 - Description - faz um resumo geral sobre o uso da função 2 - Usage - mostra como a função deve ser utilizada e quais argumentos podem ser especificados 3 - Arguments - explica o que é cada um dos argumentos 4 - Details - explica alguns detalhes sobre o uso e aplicação da função (geralmente poucos) 5 - Value - mostra o que sai no output após usar a função (os resultados) 6 - Note - notas sobre a função 7 - Authors - lista os autores da função (quem escreveu os códigos em R) 8 - References - referências para os métodos usados 9 - See also - mostra outras funções relacionadas que podem ser consultadas 10 - Examples - exemplos do uso da função. Copie e cole os exemplos no R para ver como funciona</p>
+<p>O manual completo do R e dos pacotes adicionais instalados pode ser acessado com a função help.start().Mas há várias outras formas de se obter ajuda no uso do R. Uma delas é pela chamada à função args(), que lista os argumentos recebidos por uma função, como no exemplo abaixo,</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">args</span>(candleChart)</code></pre></div>
+<pre><code>## function (x, subset = NULL, type = &quot;candlesticks&quot;, show.grid = TRUE, 
+##     name = deparse(substitute(x)), time.scale = NULL, log.scale = FALSE, 
+##     TA = &quot;addVo()&quot;, theme = chartTheme(&quot;black&quot;), major.ticks = &quot;auto&quot;, 
+##     minor.ticks = TRUE, color.vol = TRUE, multi.col = FALSE, 
+##     ...) 
+## NULL</code></pre>
+<p>O comando args(candleChart) informa que a função candleChart recebe varios argumentos. Cada argumento é separado do outro por uma vírgula. A presença de “. . .” na lista de argumentos de algumas funções significa que a função poderá receber um número indefinido de argumentos.Muitas vezes, esses argumentos são repassados para outras funções chamadas internamente.</p>
+<p>Alguns comandos possuem argumentos opcionais; outros são obrigatórios e, se não forem fornecidos, os comandos não funcionarão. Não há nenhuma diferença formal entre argumentos obrigatórios e opcionais e, portanto,somente tentando executar a função,ou lendo a sua documentação, saberemos se um determinado argumento é obrigatório ou não. Por exemplo, ao tentarmos executar a função setwd() sem nenhum argumento, ocorre um erro, ficando claro que o argumento é obrigatório.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">setwd</span>()
+
+##Error in setwd() : argument &quot;dir&quot; is missing, with no default</code></pre></div>
+<p>Em caso de dúvida, digite ?nome_da_função para obter a ajuda necessária.</p>
+<p>digamos que queremos saber se existe alguma relação entre a o retorno diário da b2w o retorno diario da magazine luiza.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#calculando o retorno diário</span>
+B2W_RET &lt;-<span class="st"> </span><span class="kw">dailyReturn</span>(BTOW3.SA)
+ML_RET &lt;-<span class="st"> </span><span class="kw">dailyReturn</span>(MGLU3.SA)
+
+<span class="co">#visualizando o numero de observações</span>
+<span class="kw">length</span>(B2W_RET)</code></pre></div>
+<pre><code>## [1] 172</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">length</span>(ML_RET)</code></pre></div>
+<pre><code>## [1] 172</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#visualizando graficamente o valores dos retornos </span>
+<span class="kw">plot</span>(<span class="kw">coredata</span>(B2W_RET),<span class="kw">coredata</span>(ML_RET) )</code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
+<p>Agora devemos rodar a regressão,lm que Cria um modelo linear que pode ser utilizado para regressão linear, análise de variância entre outros. sintaxe- lm(formula, dados, opções)</p>
+<p>Parâmetros formula- Especifica a relação entre a variável resposta e a variável explicativa. Ver exemplos. dados- Objeto do tipo data.frame que contém os dados.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#regressão </span>
+relacao &lt;-<span class="st"> </span><span class="kw">lm</span>(ML_RET<span class="op">~</span>B2W_RET)</code></pre></div>
+<p>Uma das funções mais usadas é summary() que, de um modo bastante sucinto, apresenta informações sobre um objeto. Trata-se de uma função genérica que possui um método diferente para diferentes tipos de objetos. Ou seja, o sumário apresentado tem uma formatação que depende da classe do objeto. summary() resumo dos dados apresentando seis medidas de posição que descrevem os dados (os valores mínimo e máximo, a média e a mediana, o primeiro e o terceiro quartis).</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(ML_RET)</code></pre></div>
+<pre><code>##      Index            daily.returns       
+##  Min.   :2018-01-02   Min.   :-0.0693606  
+##  1st Qu.:2018-03-05   1st Qu.:-0.0170419  
+##  Median :2018-05-07   Median : 0.0004183  
+##  Mean   :2018-05-06   Mean   : 0.0030128  
+##  3rd Qu.:2018-07-07   3rd Qu.: 0.0188337  
+##  Max.   :2018-09-06   Max.   : 0.1459990</code></pre>
+<p>Utilizando o comando summary podemos obter um resumo da regressão.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#output da regressão</span>
+<span class="kw">summary</span>(relacao)</code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = ML_RET ~ B2W_RET)
+## 
+## Residuals:
+##       Min        1Q    Median        3Q       Max 
+## -0.051760 -0.017057 -0.001738  0.012475  0.152297 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) 0.002233   0.002112   1.057    0.292    
+## B2W_RET     0.403576   0.059978   6.729 2.51e-10 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.02766 on 170 degrees of freedom
+## Multiple R-squared:  0.2103, Adjusted R-squared:  0.2057 
+## F-statistic: 45.28 on 1 and 170 DF,  p-value: 2.508e-10</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">##
+<span class="kw">plot</span>(<span class="kw">coredata</span>(B2W_RET),<span class="kw">coredata</span>(ML_RET) )
+relacao &lt;-<span class="st"> </span><span class="kw">lm</span>(ML_RET<span class="op">~</span>B2W_RET)
+<span class="kw">abline</span>(relacao)</code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#retornos acumulados</span>
+<span class="co">#retornos acumulados</span>
+acum_ML_RET &lt;-<span class="st"> </span><span class="kw">cumsum</span>(ML_RET)
+<span class="kw">plot</span>(acum_ML_RET)</code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-31-2.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">acum_B2W_RET &lt;-<span class="st"> </span><span class="kw">cumsum</span>(B2W_RET)
+<span class="kw">plot</span>(acum_B2W_RET)</code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-31-3.png" width="672" /></p>
+</div>
+</div>
+<div id="referencias-1" class="section level2">
+<h2><span class="header-section-number">3.3</span> Referências</h2>
+<p>Introdução ao uso do programa R - INPA PPGE - Victor lemes Landeiro</p>
+<p>R para cientistas sociais - Jackson Alves de Aquino</p>
+<p>Introdução à Linguagem R para Pós-Graduandos em Ecologia e áreas afins - <a href="http://ecologia.ib.usp.br/bie5782/doku.php?id=start" class="uri">http://ecologia.ib.usp.br/bie5782/doku.php?id=start</a></p>
+<p>Introductory Statistics with R - Peter Dalgaard</p>
+<p>R Core Team (2018). R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. URL <a href="https://www.R-project.org/" class="uri">https://www.R-project.org/</a>.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="aula-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="aula-3.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

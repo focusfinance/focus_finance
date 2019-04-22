@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>2 Aula 1 | Uma breve Explicação</title>
+  <meta name="description" content="2 Aula 1 | Uma breve Explicação">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="2 Aula 1 | Uma breve Explicação" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Aula 1 | Uma breve Explicação" />
+  
+  
+  
+
+<meta name="author" content="Vítor Salgado">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="index.html">
+<link rel="next" href="aula-2.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introdução</a></li>
+<li class="chapter" data-level="2" data-path="aula-1.html"><a href="aula-1.html"><i class="fa fa-check"></i><b>2</b> Aula 1</a><ul>
+<li class="chapter" data-level="2.1" data-path="aula-1.html"><a href="aula-1.html#o-que-e-o-r"><i class="fa fa-check"></i><b>2.1</b> O que é o R?</a></li>
+<li class="chapter" data-level="2.2" data-path="aula-1.html"><a href="aula-1.html#instalando-r"><i class="fa fa-check"></i><b>2.2</b> Instalando R</a></li>
+<li class="chapter" data-level="2.3" data-path="aula-1.html"><a href="aula-1.html#o-r-como-calculadora"><i class="fa fa-check"></i><b>2.3</b> O R como calculadora</a></li>
+<li class="chapter" data-level="2.4" data-path="aula-1.html"><a href="aula-1.html#funcoes-do-r"><i class="fa fa-check"></i><b>2.4</b> Funções do R:</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="aula-1.html"><a href="aula-1.html#exemplo-1"><i class="fa fa-check"></i><b>2.4.1</b> exemplo 1</a></li>
+<li class="chapter" data-level="2.4.2" data-path="aula-1.html"><a href="aula-1.html#exemplo-2"><i class="fa fa-check"></i><b>2.4.2</b> exemplo 2</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="aula-1.html"><a href="aula-1.html#algumas-funcoes-basicas-uteis"><i class="fa fa-check"></i><b>2.5</b> Algumas funções básicas úteis:</a></li>
+<li class="chapter" data-level="2.6" data-path="aula-1.html"><a href="aula-1.html#tipos-de-variaveis"><i class="fa fa-check"></i><b>2.6</b> TIPOS DE VARIÁVEIS</a></li>
+<li class="chapter" data-level="2.7" data-path="aula-1.html"><a href="aula-1.html#objetos-do-r-o-que-sao"><i class="fa fa-check"></i><b>2.7</b> Objetos do R (O que são?):</a></li>
+<li class="chapter" data-level="2.8" data-path="aula-1.html"><a href="aula-1.html#acessar-valores-dentro-de-um-objeto-colchetes"><i class="fa fa-check"></i><b>2.8</b> Acessar valores dentro de um objeto [colchetes]</a><ul>
+<li class="chapter" data-level="2.8.1" data-path="aula-1.html"><a href="aula-1.html#exemplo"><i class="fa fa-check"></i><b>2.8.1</b> exemplo:</a></li>
+</ul></li>
+<li class="chapter" data-level="2.9" data-path="aula-1.html"><a href="aula-1.html#matrizes"><i class="fa fa-check"></i><b>2.9</b> Matrizes</a><ul>
+<li class="chapter" data-level="2.9.1" data-path="aula-1.html"><a href="aula-1.html#exercicios"><i class="fa fa-check"></i><b>2.9.1</b> Exercicios:</a></li>
+<li class="chapter" data-level="2.9.2" data-path="aula-1.html"><a href="aula-1.html#alguns-comandos-basicos-uteis"><i class="fa fa-check"></i><b>2.9.2</b> Alguns comandos básicos úteis:</a></li>
+</ul></li>
+<li class="chapter" data-level="2.10" data-path="aula-1.html"><a href="aula-1.html#referencias"><i class="fa fa-check"></i><b>2.10</b> Referências</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="aula-2.html"><a href="aula-2.html"><i class="fa fa-check"></i><b>3</b> Aula 2</a><ul>
+<li class="chapter" data-level="3.1" data-path="aula-2.html"><a href="aula-2.html#factor"><i class="fa fa-check"></i><b>3.1</b> Factor</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="aula-2.html"><a href="aula-2.html#exemplo-1-1"><i class="fa fa-check"></i><b>3.1.1</b> Exemplo 1</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="aula-2.html"><a href="aula-2.html#pacotes-packages"><i class="fa fa-check"></i><b>3.2</b> Pacotes (packages)</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="aula-2.html"><a href="aula-2.html#exemplo-2-1"><i class="fa fa-check"></i><b>3.2.1</b> exemplo 2</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="aula-2.html"><a href="aula-2.html#referencias-1"><i class="fa fa-check"></i><b>3.3</b> Referências</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="aula-3.html"><a href="aula-3.html"><i class="fa fa-check"></i><b>4</b> Aula 3</a><ul>
+<li class="chapter" data-level="4.1" data-path="aula-3.html"><a href="aula-3.html#estatistica-descritiva"><i class="fa fa-check"></i><b>4.1</b> Estatística descritiva</a></li>
+<li class="chapter" data-level="4.2" data-path="aula-3.html"><a href="aula-3.html#selecao-condicional"><i class="fa fa-check"></i><b>4.2</b> Seleção Condicional</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="aula-3.html"><a href="aula-3.html#selecao-condicional-em-vetores"><i class="fa fa-check"></i><b>4.2.1</b> Seleção condicional em vetores</a></li>
+<li class="chapter" data-level="4.2.2" data-path="aula-3.html"><a href="aula-3.html#a-funcao-which"><i class="fa fa-check"></i><b>4.2.2</b> A função which()</a></li>
+<li class="chapter" data-level="4.2.3" data-path="aula-3.html"><a href="aula-3.html#selecao-condicional-em-data-frames"><i class="fa fa-check"></i><b>4.2.3</b> Seleção condicional em data frames</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="aula-1.html"><a href="aula-1.html#exercicios"><i class="fa fa-check"></i><b>4.3</b> Exercícios</a></li>
+<li class="chapter" data-level="4.4" data-path="aula-3.html"><a href="aula-3.html#condicoes-no-r"><i class="fa fa-check"></i><b>4.4</b> Condições no R</a></li>
+<li class="chapter" data-level="4.5" data-path="aula-3.html"><a href="aula-3.html#referencias-2"><i class="fa fa-check"></i><b>4.5</b> Referências</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="aula-4.html"><a href="aula-4.html"><i class="fa fa-check"></i><b>5</b> Aula 4</a><ul>
+<li class="chapter" data-level="5.1" data-path="aula-4.html"><a href="aula-4.html#probabilidade-distribuicao-de-probabilidade-e-o-teste-t"><i class="fa fa-check"></i><b>5.1</b> Probabilidade, Distribuição de probabilidade e o teste t</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="aula-4.html"><a href="aula-4.html#probabilidade"><i class="fa fa-check"></i><b>5.1.1</b> Probabilidade</a></li>
+<li class="chapter" data-level="5.1.2" data-path="aula-4.html"><a href="aula-4.html#experimento-aleatorio"><i class="fa fa-check"></i><b>5.1.2</b> Experimento aleatório</a></li>
+<li class="chapter" data-level="5.1.3" data-path="aula-4.html"><a href="aula-4.html#ponto-amostral"><i class="fa fa-check"></i><b>5.1.3</b> Ponto amostral</a></li>
+<li class="chapter" data-level="5.1.4" data-path="aula-4.html"><a href="aula-4.html#espaco-amostral"><i class="fa fa-check"></i><b>5.1.4</b> Espaço amostral</a></li>
+<li class="chapter" data-level="5.1.5" data-path="aula-4.html"><a href="aula-4.html#evento"><i class="fa fa-check"></i><b>5.1.5</b> Evento</a></li>
+<li class="chapter" data-level="5.1.6" data-path="aula-4.html"><a href="aula-4.html#espacos-equiprovaveis"><i class="fa fa-check"></i><b>5.1.6</b> Espaços equiprováveis</a></li>
+<li class="chapter" data-level="5.1.7" data-path="aula-4.html"><a href="aula-4.html#calculo-de-probabilidades"><i class="fa fa-check"></i><b>5.1.7</b> Cálculo de probabilidades</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="aula-4.html"><a href="aula-4.html#combinatoria"><i class="fa fa-check"></i><b>5.2</b> Combinatória</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="aula-4.html"><a href="aula-4.html#fatorial"><i class="fa fa-check"></i><b>5.2.1</b> Fatorial</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="aula-4.html"><a href="aula-4.html#distribuicao-de-probabilidade"><i class="fa fa-check"></i><b>5.3</b> Distribuição de probabilidade</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="aula-4.html"><a href="aula-4.html#distribuicao"><i class="fa fa-check"></i><b>5.3.1</b> Distribuição</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="aula-4.html"><a href="aula-4.html#exercicios-1"><i class="fa fa-check"></i><b>5.4</b> Exercicios</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="aula-4.html"><a href="aula-4.html#consultoria-sobre-investimentos"><i class="fa fa-check"></i><b>5.4.1</b> Consultoria sobre investimentos</a></li>
+<li class="chapter" data-level="5.4.2" data-path="aula-4.html"><a href="aula-4.html#queda-na-bolsa"><i class="fa fa-check"></i><b>5.4.2</b> Queda na Bolsa</a></li>
+<li class="chapter" data-level="5.4.3" data-path="aula-4.html"><a href="aula-4.html#teste-t"><i class="fa fa-check"></i><b>5.4.3</b> Teste t</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="aula-4.html"><a href="aula-4.html#referencias-3"><i class="fa fa-check"></i><b>5.5</b> Referências</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="aula-5.html"><a href="aula-5.html"><i class="fa fa-check"></i><b>6</b> Aula 5</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Uma breve Explicação</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="aula-1" class="section level1">
+<h1><span class="header-section-number">2</span> Aula 1</h1>
+<div id="o-que-e-o-r" class="section level2">
+<h2><span class="header-section-number">2.1</span> O que é o R?</h2>
+<p>Manipulção de dados, cálculos, exibição de gráficos.</p>
+<p>Existem muitos softwares de estatística, mas o R é um dos mais populares.O R é um software gratuito, o que justifica a sua escolha. Mas além disso, a comunidade é muito ativa, desenvolvendo muitos pacotes - inclusive para econometria e finanças. O R não é tão amigável quanto o gretl: não existem menus para escolher como estimar. Entretanto, ele é muito mais flexível. Assim, o R tem ganho cada vez mais espaço entre aqueles que fazem econometria e finanças.</p>
+<p>O R é um software livre de estatística (software livre para computação estatística e construção de gráficos que pode ser baixado e distribuído gratuitamente de acordo com a licença GNU.)que funciona em diversos sistemas operacionais: GNU Linux,MicrosoftWindows,Mac OS X e outros. O aprendizado do R é difícil no início devido à necessidade de se adaptar à sua lógica de funcionamento, se acostumar com a estrutura dos seus documentos de ajuda e memorizar alguns comandos básicos. É preciso bastante perseverança e motivação para aprender os comandos básicos, e disposição para ler as páginas de ajuda e os manuais. Entretanto, depois de um certo tempo, ele possibilita que se trabalhe com grande produtividade e, o que é mais importante, eficácia.</p>
+<p>Apenas ler esse texto talvez não ajude, acompanhe-o fazendo os cálculos no R.</p>
+<p>Para um entendimento melhor sobre sofwtare de analise de dados recomendo a leitura de “The Popularity of Data Analysis Software - by Robert A. Muenchen” o artigo mostra os sofwtares mais usados por caso. exemplo: os mais usados para artigo acadêmico: SPSS, SAS, R; os mais usados para trabalhos analiticos: Java, Sas, Pynthon.</p>
+</div>
+<div id="instalando-r" class="section level2">
+<h2><span class="header-section-number">2.2</span> Instalando R</h2>
+<p>Pesquisando no google “R programing”. um dos primeiros resultados é o site <a href="https://www.r-project.org/" class="uri">https://www.r-project.org/</a>. Acesse este site e siga as instruções. Ou já pesquise direto “download r”.</p>
+<p>Depois instale uma interface visual chamada Rstudio para não ficar sofrendo trabalhando simplesmente com o interpretador de linha de comando. Pesquise no google “Rstudio”. O R Studio é uma IDE (Integrated Development Enviroment), que facilita muito a vida na hora de programar - especialmente dando sugestões de comandos e mostrando quais variáveis estão salvas no ambiente do R.</p>
+<p>A interface do R Studio mostra 4 espaços diferentes: no canto esquerdo superior, existe uma tela chamada source (se ela não estiver lá, tente usar ctrl + shift + n para abrir); a direita dela, o ambiente; no canto inferior esquerdo, está o console; e no canto inferior direito está uma tela multiuso, que deve vir com as abas plot, files. Cada uma dessas será explicada, por alto, nesta seção</p>
+<p>A que mais nos interessa, em um primeiro momento, é o console. Nele, você pode passar comandos direto para o R. Digitando 2 + 2 nele e clicando em enter, o resultado deve aparecer na tela. Em geral, é nele que você vai trabalhar. Entretanto, escrever código muito longos no console é muito ruim. O console é desorganizado, não permite salvar o código passado para ele para ser usado mais tarde e não permite com que você corrija erros com facilidade. O source serve justamente para escrever um código longo - uma função ou uma simulação, por exemplo - que pode ser executado no console. Para isso, basta selecionar o conteúdo e dar ctrl + enter ou chegar no fim da linha e usar ctrl + enter.</p>
+<p>A tela do canto direito inferior é uma “geleia geral”: a aba plots é onde os gráficos que faremos vão aparecer; a aba files permite você ver arquivos em diferentes pastas do computador. Estas são as abas mais importantes e que mais serão usadas. Em cima desta tela, há a tela environment, que mostra as variáveis que foram criadas e estão disponíveis para o R usar.</p>
+</div>
+<div id="o-r-como-calculadora" class="section level2">
+<h2><span class="header-section-number">2.3</span> O R como calculadora</h2>
+<p>O forma de uso mais básica do R é usá-lo como calculadora. Os operadores matemáticos básicos são: + para soma, - subtração, * multiplicação, / divisão e ^ exponenciação.</p>
+<p>Além dos matemáticos temos os operadores lógicos como &gt; maior que, &lt; menor que, &gt;= maior ou igual a, &lt;= menor ou igual a, &amp; E, | OU, == igual a, ! não, != Diferente de.</p>
+<p>Digite as seguintes operações no source do Rstudio: Para executar o codigo utilize Ctrl+ENTER, se você estiver digitando no console basta apenas o ENTER.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">2</span><span class="op">+</span><span class="dv">2</span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">2</span><span class="op">*</span><span class="dv">2</span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">2</span><span class="op">/</span><span class="dv">2</span></code></pre></div>
+<pre><code>## [1] 1</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">2</span><span class="op">-</span><span class="dv">2</span></code></pre></div>
+<pre><code>## [1] 0</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">2</span><span class="op">^</span><span class="dv">2</span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<p>Use parênteses para separar partes dos cálculos, por exemplo, para fazer a conta 4+16, dividido por 4, elevado ao quadrado:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">((<span class="dv">4</span><span class="op">+</span><span class="dv">16</span>)<span class="op">/</span><span class="dv">4</span>)<span class="op">^</span><span class="dv">2</span></code></pre></div>
+<pre><code>## [1] 25</code></pre>
+<p>A notação básica de operações algébricas, como a aplicação hierárquica de parênteses, também pode ser utilizada, Note que somente os parênteses podem ser utilizados nas expressões matemáticas. As chaves (“{}”) e os colchetes (“[]”) têm outras funções no R.</p>
+</div>
+<div id="funcoes-do-r" class="section level2">
+<h2><span class="header-section-number">2.4</span> Funções do R:</h2>
+<p>O R tem diversas funções que podemos usar para fazer os cálculos desejados. O uso básico de uma função é escrever o nome da função e colocar os argumentos entre parênteses, por exemplo: função(argumentos). função especifica qual função irá usar e argumentos especifica os argumentos que serão avaliados pela função. Não se assuste com esses nomes, com um pouco de pratica eles se tornarão triviais.</p>
+<hr />
+<div id="exemplo-1" class="section level3">
+<h3><span class="header-section-number">2.4.1</span> exemplo 1</h3>
+<p>Considerando que a média setorial seria uma boa aproximação, você quer determinar a taxa de retorno do seu negócio. Empresas comparáveis com a sua, atuando no mesmo ramo,mesma linha de produtos, fornecedores e mesmo perfil de clientes, apresentam as seguintes taxas de retorno:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Empresa x taxa de retorno é 20,40% ao ano.</li>
+<li>Empresa y taxa de retorno é 21,02% ao ano.</li>
+<li>Empresa z taxa de retorno é 19,13% ao ano.</li>
+</ol>
+<p>A taxa média de retorno para o segmento onde opera sua empresa é qual?</p>
+<p>Observando que as taxas são semelhantes, podemos fazer uma média aritmética simples. É uma aproximação, porém serve para compararmos com a taxa fornecida também pelo modelo CAPM.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#Criando o vetor segmento que contém os rendimentos das empresas do setor</span>
+segmento &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dt">empresa_x=</span><span class="fl">20.40</span>, <span class="dt">empresa_y=</span><span class="fl">21.02</span>, <span class="dt">empresa_z=</span><span class="fl">19.13</span>)
+<span class="kw">barplot</span>(segmento)</code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#calculando a taxa média de retorno do setor</span>
+<span class="kw">mean</span>(segmento)</code></pre></div>
+<pre><code>## [1] 20.18333</code></pre>
+<p>No R o sinal de <code>#</code>(serquilha) é usado para inserir comentários, é o mesmo que dizer: “a partir do # existem apenas comentários”. O R não lê o que vem após o #. Observe que qualquer texto após o caractere # é ignorado pelo R e esta característica é utilizada para inserir comentários no script que ajudarão o pesquisador a entender o próprio código se precisar retornar a ele alguns meses após tê-lo escrito.</p>
+<p>O R é case-sensitive, isto é, ele diferencia letras maiúsculas de minúsculas, portanto A é diferente de a. O separador de casas decimais é ponto “.”. A vírgula é usada para separar argumentos (informações). Não é recomendado o uso de acentos em palavras (qualquer nome que for salvar em um computador, não só no R, evite usar acentos. Acentos são comandos usados em programação e podem causar erros, por exemplo, em documentos do word e excel).</p>
+<p>Logo abaixo quando formos falar de objeto explico o que é vetor.</p>
+<p>O comando <code>&lt;-</code> (sinal de menor e sinal de menos) significa assinalar (assign). Indica que tudo que vem após este comando será salvo com o nome que vem antes. É o mesmo que dizer “salve os dados a seguir com o nome de.</p>
+<p>A letra <code>c</code> significa concatenar (colocar junto). Entenda como “agrupe os dados entre parênteses dentro do objeto que será criado” neste caso no objeto segmento.</p>
+<p><code>mean</code> = media = S/n onde S: soma dos termos, n: número de termos. Observe que mean é uma função genérica para media aritmética e o argumento utilizado foi o vetor segmento que continha 3 empresas. Para visulaizar o que uma função faz utilize uma interrogação antes do nome da função.exemplo: <code>?mean</code></p>
+<p>Para criar o gráfico utilizei a função barplot() que cria gráfico de barras horizontais ou verticais.</p>
+<p>observe que é possível atribuir nomes aos elementos.</p>
+</div>
+<div id="exemplo-2" class="section level3">
+<h3><span class="header-section-number">2.4.2</span> exemplo 2</h3>
+<p>João tinha um dinheiro aplicado e uma vez por mês olhava o saldo da conta: jan - 9839, fev - 10149, mar - 10486, abr - 10746, mai - 11264, jun - 11684, jul 12082, ago - 12599, set - 13004, out - 13350, nov - 13717, dez - 14052.</p>
+<ol style="list-style-type: decimal">
+<li>calcule o ganho de cada mês neste período.</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#criando o vetor que contém os saldos da conta de joão</span>
+
+saldos &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dt">jan=</span><span class="dv">9839</span>,<span class="dt">fev=</span><span class="dv">10149</span>,<span class="dt">mar=</span><span class="dv">10486</span>,<span class="dt">abr=</span><span class="dv">10746</span>,<span class="dt">mai=</span><span class="dv">11264</span>,<span class="dt">jun=</span><span class="dv">11684</span>,<span class="dt">jul=</span><span class="dv">12082</span>,
+            <span class="dt">ago=</span><span class="dv">12599</span>,<span class="dt">set=</span><span class="dv">13004</span>,<span class="dt">out=</span><span class="dv">13350</span>,<span class="dt">nov=</span><span class="dv">13717</span>,<span class="dt">dez=</span><span class="dv">14052</span>)
+
+<span class="co">#visualizando os saldos em um gráfico</span>
+<span class="kw">barplot</span>(saldos)</code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#calculo do ganho mensal</span>
+ganho &lt;-<span class="st"> </span><span class="kw">diff</span>(saldos)
+
+<span class="co">#visualizando o ganho mensal em um gráfico</span>
+<span class="kw">barplot</span>(ganho)</code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-4-2.png" width="672" /></p>
+<p>Olhe que criei o objeto leituras atribuindo a ele os meses e seus respectivos valores, e na hora do cálculo do consumo mensal utilizei a função diff() que retornou a diferença de leitura entre um mês e o consecutivo. diff() tem a particularidade de retornar como resultado um vetor de tamanho igual ao comprimento do vetor de entrada, menos uma posição.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Qual foi o ganho máximo e o mínimo?</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 2. Consumos máximos e mínimos</span>
+<span class="co">#Com dois comandos</span>
+<span class="kw">max</span>(ganho)</code></pre></div>
+<pre><code>## [1] 518</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">min</span>(ganho)</code></pre></div>
+<pre><code>## [1] 260</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#ou simplesmente:</span>
+<span class="kw">range</span>(ganho)</code></pre></div>
+<pre><code>## [1] 260 518</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Qual a média, mediana e variância dos ganhos?</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#3. Média, mediana e variância do consumo</span>
+<span class="kw">mean</span>(ganho)</code></pre></div>
+<pre><code>## [1] 383</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">median</span>(ganho)</code></pre></div>
+<pre><code>## [1] 367</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">var</span>(ganho)</code></pre></div>
+<pre><code>## [1] 6476.2</code></pre>
+<hr />
+</div>
+</div>
+<div id="algumas-funcoes-basicas-uteis" class="section level2">
+<h2><span class="header-section-number">2.5</span> Algumas funções básicas úteis:</h2>
+<p>exponencial - exp()</p>
+<p>logaritmo natural - neperiano - log()</p>
+<p>raiz quadrada - sqrt()</p>
+<p>expoente - ** ou ^</p>
+<p>fatorial - factorial()</p>
+<p>extrair o módulo - abs()</p>
+<p>somatorio - - sum()</p>
+<p>produtorio - prod()</p>
+<p>cosseno - cos()</p>
+<p>tangente - tan()</p>
+<p>seno - sin()</p>
+<p>Saber a parte inteira de uma divisão - %/%</p>
+<p>Saber o resto da divisão - %%</p>
+<p>maximo - max()</p>
+<p>minimo - min()</p>
+<p>variancia - var()</p>
+<p>desvio padrão - sd()</p>
+<p>mediana - median()</p>
+<p>pi = 3.141593</p>
+<p>Inf - infinito</p>
+<p>NaN - indeterminado (Not a Number), normalmente resultado de uma operação matemática indeterminada</p>
+<p>NA - indeterminado (Not Available), normalmente caracterizando uma observação perdida (missing value)</p>
+</div>
+<div id="tipos-de-variaveis" class="section level2">
+<h2><span class="header-section-number">2.6</span> TIPOS DE VARIÁVEIS</h2>
+<p>Durante uma análise de dados, precisamos lidar com diferentes tipos de variáveis. A seguir estão listados os tipos mais comuns, com o nome utilizado no R para se referir a eles entre parênteses:</p>
+<p>Numéricas (numeric): Números inteiros ou reais, como idade, renda, número de filhos.</p>
+<p>Datas (Date): São um tipo especial de variável numérica.</p>
+<p>Categóricas (factor): Variáveis qualitativas, ou seja, características dos indivíduos para as quais não é possível atribuir um valor numérico, como sexo, religião, estado civil, opinião sobre algum tema. É possível agrupar os indivíduos em categorias e contar quantos indivíduos pertencem a cada categoria, mas se, por exemplo, um indivíduo afirma ser católico, e outro, protestante, não podemos, com base nessas afirmações, considerar um mais religioso do que o outro.</p>
+<p>Categóricas ordenáveis (ordered): Tipo de variável categórica cujas categorias podem ser hierarquizáveis, como grau de escolaridade, alguns tipos de respostas a perguntas de questionário. Se à pergunta “Qual o papel do governo?”, as opções de resposta forem “O governo deve mandar em tudo”, “O governo deve controlar algumas coisas” e “Não precisamos de governo”, poderíamos considerar aqueles que optaram pela primeira opção adeptos de uma ideologia mais estatizante do que aqueles que escolheram a terceira opção.</p>
+<p>Texto (character): Características puramente individuais que não podem ser utilizadas para categorizar os indivíduos. Geralmente aparecem nos bancos de dados apenas para ajudar em análises qualitativas e não estatísticas. Exemplo: o nome dos candidatos num banco de dados de resultados eleitorais. Em alguns casos, os textos são passíveis de categorização, como as respostas a uma pergunta aberta. Neste caso, seria preciso manualmente recodificar as respostas abertas numa nova variável contendo um número limitado de categorias.</p>
+<p>Booleanas (logical): Variáveis cujos valores podem ser VERDADEIRO ou FALSO; no R, TRUE ou FALSE.</p>
+</div>
+<div id="objetos-do-r-o-que-sao" class="section level2">
+<h2><span class="header-section-number">2.7</span> Objetos do R (O que são?):</h2>
+<p>O que são os Objetos do R? Existem muitos tipos de objetos no R que só passamos a conhecê-los bem com o passar do tempo. Por enquanto vamos aprender os tipos básicos de objetos.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>vetores: uma seqüência de valores numéricos ou de caracteres (letras, palavras).</p></li>
+<li><p>matrizes: coleção de vetores em linhas e colunas, todos os vetores dever ser do mesmo tipo (numérico ou de caracteres).</p></li>
+<li><p>dataframe: O mesmo que uma matriz, mas aceita vetores de tipos diferentes (numérico e caracteres). Geralmente nós guardamos nossos dados em objetos do tipo data frame, pois sempre temos variáveis numéricas e variáveis categóricas (por exemplo, largura do rio e nome do rio, respectivamente).</p></li>
+<li><p>listas: conjunto de vetores, dataframes ou de matrizes. Não precisam ter o mesmo comprimento, é a forma que a maioria das funções retorna os resultados.</p></li>
+<li><p>funções: as funções criadas para fazer diversos cálculos também são objetos do R. No decorrer da apostila você verá exemplos de cada um destes objetos.</p></li>
+</ol>
+<p>Para visualizar o tipo de objeto ou da variável utilize <code>class()</code>.</p>
+<p>Para uma leitura mais aprofundada sobre os tipos de objetos e definições da linguagem R leia o manual “R language definition” e o “An introduction to R” páginas 7 a 12, ambos disponíveis no menu “HELP”, “Manuais em PDF”. Clique em help no menu do R e em Manuais (em PDF) para abrir os arquivos.</p>
+</div>
+<div id="acessar-valores-dentro-de-um-objeto-colchetes" class="section level2">
+<h2><span class="header-section-number">2.8</span> Acessar valores dentro de um objeto [colchetes]</h2>
+<p>Caso queira acessar apenas um valor do conjunto de dados use colchetes []. Isto é possível porque o R salva os objetos como vetores, ou seja, a sequencia na qual você incluiu os dados é preservada.</p>
+<p>Se quiser excluir valores de um vetor, utilize o mesmo método só que com o sinal de - na frente.</p>
+<p>E para alterar utilizamos a regra geral objeto[index] &lt;- valor.</p>
+<div id="exemplo" class="section level3">
+<h3><span class="header-section-number">2.8.1</span> exemplo:</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#calculando retorno anual da empresa w utilizando os retornos mensais</span>
+<span class="co">#digamos que os retornos mensais da empresa w seja de 19, 18, 17, 19, 18, 18, 17, </span>
+<span class="co">#22, 21, 20, 20, 17.</span>
+
+<span class="co">#atribuindo retornos mensais a empresa w</span>
+
+empresa_w_mensal &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">19</span>, <span class="dv">18</span>, <span class="dv">17</span>, <span class="dv">19</span>, <span class="dv">18</span>, <span class="dv">18</span>, <span class="dv">17</span>, <span class="dv">22</span>, <span class="dv">21</span>, <span class="dv">20</span>, <span class="dv">20</span>, <span class="dv">17</span>)
+
+<span class="co">#Acessando valores dentro do objeto</span>
+empresa_w_mensal[<span class="dv">8</span>] <span class="co">#Extrai o oitavo valor</span></code></pre></div>
+<pre><code>## [1] 22</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">empresa_w_mensal[<span class="kw">c</span>(<span class="dv">12</span>,<span class="dv">1</span>,<span class="dv">2</span>)] <span class="co">#Extrai o primeiro, o segundo e o decimo segundo.</span></code></pre></div>
+<pre><code>## [1] 17 19 18</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#Excluindo valores</span>
+empresa_w_mensal[<span class="op">-</span><span class="dv">8</span>] <span class="co">#Exclui o oitavo valor</span></code></pre></div>
+<pre><code>##  [1] 19 18 17 19 18 18 17 21 20 20 17</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">empresa_w_mensal[<span class="op">-</span><span class="kw">c</span>(<span class="dv">12</span>,<span class="dv">1</span>,<span class="dv">2</span>)] <span class="co">#Exclui o primeiro, o segundo e o decimo segundo.</span></code></pre></div>
+<pre><code>## [1] 17 19 18 18 17 22 21 20 20</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#substituindo valores</span>
+empresa_w_mensal[<span class="dv">12</span>] &lt;-<span class="st"> </span><span class="dv">27</span> <span class="co">#Substitui o decimo segundo valor por 27</span>
+empresa_w_mensal[<span class="kw">c</span>(<span class="dv">11</span>,<span class="dv">12</span>)] &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">23</span>,<span class="dv">24</span>) <span class="co">#Substitui o decimo primeiro e o decimo </span>
+                                    <span class="co">#segundo valor por 23 e 24.</span>
+
+
+empresa_w &lt;-<span class="st"> </span><span class="kw">mean</span>(empresa_w_mensal) <span class="co">#calculando retorno medio anual fazendo media</span>
+                  <span class="co"># dos retornos mensais e atribuindo esse valor a empresa_w </span>
+empresa_w  <span class="co">#visualizando o valor da empresa_w.</span></code></pre></div>
+<pre><code>## [1] 19.66667</code></pre>
+</div>
+</div>
+<div id="matrizes" class="section level2">
+<h2><span class="header-section-number">2.9</span> Matrizes</h2>
+<p>Chamamos de matriz uma tabela de elementos dispostos em linhas e colunas. Por exemplo, ao recolhermos os dados referentes a receita, lucro e patrimônio de um grupo de quatro empresas, podemos dispô-los em uma tabela:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">empresa_a &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dt">receita=</span><span class="dv">10</span>, <span class="dt">lucro=</span><span class="dv">2</span>, <span class="dt">patrimonio=</span><span class="dv">100</span>)
+empresa_b &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dt">receita=</span><span class="dv">8</span>, <span class="dt">lucro=</span><span class="dv">1</span>, <span class="dt">patrimonio=</span><span class="dv">120</span>)
+empresa_c &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dt">receita=</span><span class="dv">11</span>, <span class="dt">lucro=</span><span class="dv">4</span>, <span class="dt">patrimonio=</span><span class="dv">85</span>)
+empresa_d &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dt">receita=</span><span class="dv">10</span>, <span class="dt">lucro=</span><span class="dv">1</span>, <span class="dt">patrimonio=</span><span class="dv">94</span>)</code></pre></div>
+<p>As funções cbind() (juntar colunas) e rbind() (juntar linhas) juntam vetores formando matrizes, ou seja, uma forma retangular de representação dos dados em que eles estão distribuídos em linhas e colunas. Cada vetor fornecido como argumento para a função cbind()se torna uma coluna da matriz resultante; com a função rbind(), cada vetor se torna uma linha:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cbind</span>(empresa_a, empresa_b, empresa_c, empresa_d)</code></pre></div>
+<pre><code>##            empresa_a empresa_b empresa_c empresa_d
+## receita           10         8        11        10
+## lucro              2         1         4         1
+## patrimonio       100       120        85        94</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rbind</span>(empresa_a, empresa_b, empresa_c, empresa_d)</code></pre></div>
+<pre><code>##           receita lucro patrimonio
+## empresa_a      10     2        100
+## empresa_b       8     1        120
+## empresa_c      11     4         85
+## empresa_d      10     1         94</code></pre>
+<p>Vamos agora salvar a matriz resultante da função cbind() no objeto empresas, poderiamos usar a função colnames() para atribuir nomes às colunas, e a função rownames() para atribuir nomes às linhas:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">empresas &lt;-<span class="st"> </span><span class="kw">cbind</span>(empresa_a, empresa_b, empresa_c, empresa_d)
+
+<span class="kw">class</span>(empresas)</code></pre></div>
+<pre><code>## [1] &quot;matrix&quot;</code></pre>
+<p>Para acessar ou extrair dados de uma matrix, também podemos utilizar índices, como nos vetores. A diferença é que agora são necessários dois vetores de índices, um para as linhas e outro para as colunas, separados por uma vírgula. Assim como fizemos com os vetores, também podemos usar nomes para localizar elementos de uma matriz.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">empresas[<span class="dv">3</span>,  ]   <span class="co"># seleciona a terceira linha</span></code></pre></div>
+<pre><code>## empresa_a empresa_b empresa_c empresa_d 
+##       100       120        85        94</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">empresas[ , <span class="dv">2</span>]   <span class="co"># seleciona a segunda coluna</span></code></pre></div>
+<pre><code>##    receita      lucro patrimonio 
+##          8          1        120</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">empresas[<span class="dv">1</span>, <span class="dv">2</span>]   <span class="co"># seleciona o primeiro elemento da segunda coluna</span></code></pre></div>
+<pre><code>## [1] 8</code></pre>
+<p>Qual a média de receita do setor?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(empresas[<span class="dv">1</span>,]) <span class="co">#media de todos os valores da primeira linha</span></code></pre></div>
+<pre><code>## [1] 9.75</code></pre>
+<p>Analogamente ao que fizemos com os vetores, podemos usar os índices para mudar valores de elementos específicos de uma matriz.</p>
+<p>veja que class(empresas) retornou como resultado matrix, o comando class() informa qual o tipo do objeto</p>
+<div id="exercicios" class="section level3">
+<h3><span class="header-section-number">2.9.1</span> Exercicios:</h3>
+<p>1- Suponha que você marcou o tempo que leva para chegar a cada uma de suas parcelas no campo. Os tempos em minutos foram: 18, 14, 14, 15, 14, 34, 16, 17, 21, 26. Passe estes valores para o R, chame o objeto de tempo. Usando funções do R ache o tempo máximo, mínimo e o tempo médio que você levou gasta para chegar em suas parcelas.</p>
+<p>1.1- Ops, o valor 34 foi um erro, ele na verdade é 15. Sem digitar tudo novamente, e usando colchetes [ ], mude o valor e calcule novamente o tempo médio.</p>
+<p>2- Você consegue prever o resultado dos comandos abaixo? Caso não consiga, execute os comandos e veja o resultado:</p>
+<p>x&lt;-c(1,3,5,7,9), y&lt;-c(2,3,5,7,11,13)</p>
+<ol style="list-style-type: lower-alpha">
+<li>x+1</li>
+</ol>
+<p>b)y*2</p>
+<p>c)length(x) e length(y)</p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li><p>x + y</p></li>
+<li><p>y[3]</p></li>
+<li><p>y[-3]</p></li>
+</ol>
+<p>3.Considerando que a média setorial seria uma boa aproximação, você quer determinar a taxade retorno do seu negócio. Empresas comparáveis com a sua, atuando no mesmo ramo,mesma linha de produtos, fornecedores e mesmo perfil de clientes, apresentam as seguintestaxas de retorno:</p>
+<p>a)Empresa A taxa de retorno é 12,00% ao ano</p>
+<p>b)Empresa B taxa de retorno é 14,00% ao ano</p>
+<p>c)Empresa C taxa de retorno é 13,00% ao ano</p>
+<p>A taxa média de retorno para o segmento onde opera sua empresa é?</p>
+<p>4 - Você pretende comprar um novo computador daqui a um ano. Hoje você tem R$ 5.000,00 e espera que o computador custe R$ 6.000,00 na data da com pra. Sabendo que o banco remunera suas aplicações à taxa de 1,8&amp; ao mês, quanto você terá de dinheiro no tempo previsto?</p>
+<p>5 - Determine o valor de resgate de uma aplicação realizada na caderneta de poupança há três anos. Considere o valor aplicado de R$ 3.000,00 e a taxa média de rendimento de 0,84% ao mês.</p>
+<p>6 - Um aplicador deseja obter $ 70.000 no prazo de dois anos. Determine quanto deve ele aplicar hoje em um fundo que rende 3,2% ao quadri-mestre.</p>
+<hr />
+</div>
+<div id="alguns-comandos-basicos-uteis" class="section level3">
+<h3><span class="header-section-number">2.9.2</span> Alguns comandos básicos úteis:</h3>
+<p>Limpar o Console - crtl + l</p>
+<p>Criar Comentário - #</p>
+<p>mostrar o valor armazenado na variável - print(nome da variável)</p>
+<p>mostra o que está no ambiente, mostra as variáveis existentes - ls()</p>
+<p>remover os objetos - rm(nome da variável) - caso tenha mais de um objeto basta separar por virgula.</p>
+<p>Saber o tamanho do vetor / numero de observações/elementos - length()</p>
+<p>saber se é vetor - is.vector()</p>
+<p>Nomear linha - rownames()</p>
+<p>Nomear Coluna - colnames()</p>
+<p>Para visualizar onde está a pasta do R - getwd()</p>
+<p>Lista os arquivos da pasta R - dir()</p>
+<p>Colocar os valores de um vetor em ordem crescente - sort()</p>
+<p>Colocar os valores de um vetor em ordem decrescente - sort(x, decreasing=TRUE)</p>
+</div>
+</div>
+<div id="referencias" class="section level2">
+<h2><span class="header-section-number">2.10</span> Referências</h2>
+<p>Introdução ao uso do programa R - INPA PPGE - Victor lemes Landeiro</p>
+<p>R para cientistas sociais - Jackson Alves de Aquino</p>
+<p>Introdução à Linguagem R para Pós-Graduandos em Ecologia e áreas afins - <a href="http://ecologia.ib.usp.br/bie5782/doku.php?id=start" class="uri">http://ecologia.ib.usp.br/bie5782/doku.php?id=start</a></p>
+<p>Introductory Statistics with R - Peter Dalgaard</p>
+<p>R Core Team (2018). R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. URL <a href="https://www.R-project.org/" class="uri">https://www.R-project.org/</a>.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="aula-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
