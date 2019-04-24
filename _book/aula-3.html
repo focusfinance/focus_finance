@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>3 Aula 3 | Aprendendo R para economia e finanças</title>
+  <meta name="description" content="3 Aula 3 | Aprendendo R para economia e finanças">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="3 Aula 3 | Aprendendo R para economia e finanças" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 Aula 3 | Aprendendo R para economia e finanças" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="aula-2.html">
+<link rel="next" href="aula-4.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introdução</a></li>
+<li class="chapter" data-level="1" data-path="aula-1.html"><a href="aula-1.html"><i class="fa fa-check"></i><b>1</b> Aula 1</a><ul>
+<li class="chapter" data-level="1.1" data-path="aula-1.html"><a href="aula-1.html#o-que-e-o-r"><i class="fa fa-check"></i><b>1.1</b> O que é o R?</a></li>
+<li class="chapter" data-level="1.2" data-path="aula-1.html"><a href="aula-1.html#instalando-r"><i class="fa fa-check"></i><b>1.2</b> Instalando R</a></li>
+<li class="chapter" data-level="1.3" data-path="aula-1.html"><a href="aula-1.html#o-r-como-calculadora"><i class="fa fa-check"></i><b>1.3</b> O R como calculadora</a></li>
+<li class="chapter" data-level="1.4" data-path="aula-1.html"><a href="aula-1.html#funcoes-do-r"><i class="fa fa-check"></i><b>1.4</b> Funções do R:</a><ul>
+<li class="chapter" data-level="1.4.1" data-path="aula-1.html"><a href="aula-1.html#exemplo-1"><i class="fa fa-check"></i><b>1.4.1</b> exemplo 1</a></li>
+<li class="chapter" data-level="1.4.2" data-path="aula-1.html"><a href="aula-1.html#exemplo-2"><i class="fa fa-check"></i><b>1.4.2</b> exemplo 2</a></li>
+<li class="chapter" data-level="1.4.3" data-path="aula-1.html"><a href="aula-1.html#algumas-funcoes-basicas-uteis"><i class="fa fa-check"></i><b>1.4.3</b> Algumas funções básicas úteis:</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="aula-1.html"><a href="aula-1.html#tipos-de-variaveis"><i class="fa fa-check"></i><b>1.5</b> TIPOS DE VARIÁVEIS</a></li>
+<li class="chapter" data-level="1.6" data-path="aula-1.html"><a href="aula-1.html#objetos-do-r-o-que-sao"><i class="fa fa-check"></i><b>1.6</b> Objetos do R (O que são?):</a><ul>
+<li class="chapter" data-level="1.6.1" data-path="aula-1.html"><a href="aula-1.html#acessar-valores-dentro-de-um-objeto-colchetes"><i class="fa fa-check"></i><b>1.6.1</b> Acessar valores dentro de um objeto [colchetes]</a></li>
+<li class="chapter" data-level="1.6.2" data-path="aula-1.html"><a href="aula-1.html#exemplo"><i class="fa fa-check"></i><b>1.6.2</b> exemplo:</a></li>
+</ul></li>
+<li class="chapter" data-level="1.7" data-path="aula-1.html"><a href="aula-1.html#matrizes"><i class="fa fa-check"></i><b>1.7</b> Matrizes</a></li>
+<li class="chapter" data-level="1.8" data-path="aula-1.html"><a href="aula-1.html#exercicios"><i class="fa fa-check"></i><b>1.8</b> Exercicios:</a></li>
+<li class="chapter" data-level="1.9" data-path="aula-1.html"><a href="aula-1.html#alguns-comandos-basicos-uteis"><i class="fa fa-check"></i><b>1.9</b> Alguns comandos básicos úteis:</a></li>
+<li class="chapter" data-level="1.10" data-path="aula-1.html"><a href="aula-1.html#referencias"><i class="fa fa-check"></i><b>1.10</b> Referências</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="aula-2.html"><a href="aula-2.html"><i class="fa fa-check"></i><b>2</b> Aula 2</a><ul>
+<li class="chapter" data-level="2.1" data-path="aula-2.html"><a href="aula-2.html#factor"><i class="fa fa-check"></i><b>2.1</b> Factor</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="aula-2.html"><a href="aula-2.html#exemplo-1-1"><i class="fa fa-check"></i><b>2.1.1</b> Exemplo 1</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="aula-2.html"><a href="aula-2.html#pacotes-packages"><i class="fa fa-check"></i><b>2.2</b> Pacotes (packages)</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="aula-2.html"><a href="aula-2.html#exemplo-2-1"><i class="fa fa-check"></i><b>2.2.1</b> exemplo 2</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="aula-2.html"><a href="aula-2.html#referencias-1"><i class="fa fa-check"></i><b>2.3</b> Referências</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="aula-3.html"><a href="aula-3.html"><i class="fa fa-check"></i><b>3</b> Aula 3</a><ul>
+<li class="chapter" data-level="3.1" data-path="aula-3.html"><a href="aula-3.html#estatistica-descritiva"><i class="fa fa-check"></i><b>3.1</b> Estatística descritiva</a></li>
+<li class="chapter" data-level="3.2" data-path="aula-3.html"><a href="aula-3.html#selecao-condicional"><i class="fa fa-check"></i><b>3.2</b> Seleção Condicional</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="aula-3.html"><a href="aula-3.html#selecao-condicional-em-vetores"><i class="fa fa-check"></i><b>3.2.1</b> Seleção condicional em vetores</a></li>
+<li class="chapter" data-level="3.2.2" data-path="aula-3.html"><a href="aula-3.html#a-funcao-which"><i class="fa fa-check"></i><b>3.2.2</b> A função which()</a></li>
+<li class="chapter" data-level="3.2.3" data-path="aula-3.html"><a href="aula-3.html#selecao-condicional-em-data-frames"><i class="fa fa-check"></i><b>3.2.3</b> Seleção condicional em data frames</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="aula-1.html"><a href="aula-1.html#exercicios"><i class="fa fa-check"></i><b>3.3</b> Exercícios</a></li>
+<li class="chapter" data-level="3.4" data-path="aula-3.html"><a href="aula-3.html#condicoes-no-r"><i class="fa fa-check"></i><b>3.4</b> Condições no R</a></li>
+<li class="chapter" data-level="3.5" data-path="aula-3.html"><a href="aula-3.html#referencias-2"><i class="fa fa-check"></i><b>3.5</b> Referências</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="aula-4.html"><a href="aula-4.html"><i class="fa fa-check"></i><b>4</b> Aula 4</a><ul>
+<li class="chapter" data-level="4.1" data-path="aula-4.html"><a href="aula-4.html#probabilidade-distribuicao-de-probabilidade-e-o-teste-t"><i class="fa fa-check"></i><b>4.1</b> Probabilidade, Distribuição de probabilidade e o teste t</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="aula-4.html"><a href="aula-4.html#probabilidade"><i class="fa fa-check"></i><b>4.1.1</b> Probabilidade</a></li>
+<li class="chapter" data-level="4.1.2" data-path="aula-4.html"><a href="aula-4.html#experimento-aleatorio"><i class="fa fa-check"></i><b>4.1.2</b> Experimento aleatório</a></li>
+<li class="chapter" data-level="4.1.3" data-path="aula-4.html"><a href="aula-4.html#ponto-amostral"><i class="fa fa-check"></i><b>4.1.3</b> Ponto amostral</a></li>
+<li class="chapter" data-level="4.1.4" data-path="aula-4.html"><a href="aula-4.html#espaco-amostral"><i class="fa fa-check"></i><b>4.1.4</b> Espaço amostral</a></li>
+<li class="chapter" data-level="4.1.5" data-path="aula-4.html"><a href="aula-4.html#evento"><i class="fa fa-check"></i><b>4.1.5</b> Evento</a></li>
+<li class="chapter" data-level="4.1.6" data-path="aula-4.html"><a href="aula-4.html#espacos-equiprovaveis"><i class="fa fa-check"></i><b>4.1.6</b> Espaços equiprováveis</a></li>
+<li class="chapter" data-level="4.1.7" data-path="aula-4.html"><a href="aula-4.html#calculo-de-probabilidades"><i class="fa fa-check"></i><b>4.1.7</b> Cálculo de probabilidades</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="aula-4.html"><a href="aula-4.html#combinatoria"><i class="fa fa-check"></i><b>4.2</b> Combinatória</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="aula-4.html"><a href="aula-4.html#fatorial"><i class="fa fa-check"></i><b>4.2.1</b> Fatorial</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="aula-4.html"><a href="aula-4.html#distribuicao-de-probabilidade"><i class="fa fa-check"></i><b>4.3</b> Distribuição de probabilidade</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="aula-4.html"><a href="aula-4.html#distribuicao"><i class="fa fa-check"></i><b>4.3.1</b> Distribuição</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="aula-4.html"><a href="aula-4.html#exercicios-1"><i class="fa fa-check"></i><b>4.4</b> Exercicios</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="aula-4.html"><a href="aula-4.html#consultoria-sobre-investimentos"><i class="fa fa-check"></i><b>4.4.1</b> Consultoria sobre investimentos</a></li>
+<li class="chapter" data-level="4.4.2" data-path="aula-4.html"><a href="aula-4.html#queda-na-bolsa"><i class="fa fa-check"></i><b>4.4.2</b> Queda na Bolsa</a></li>
+<li class="chapter" data-level="4.4.3" data-path="aula-4.html"><a href="aula-4.html#teste-t"><i class="fa fa-check"></i><b>4.4.3</b> Teste t</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="aula-4.html"><a href="aula-4.html#referencias-3"><i class="fa fa-check"></i><b>4.5</b> Referências</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="aula-5.html"><a href="aula-5.html"><i class="fa fa-check"></i><b>5</b> Aula 5</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Aprendendo R para economia e finanças</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="aula-3" class="section level1">
+<h1><span class="header-section-number">3</span> Aula 3</h1>
+<div id="estatistica-descritiva" class="section level2">
+<h2><span class="header-section-number">3.1</span> Estatística descritiva</h2>
+<p><a href="http://leg.ufpr.br/~fernandomayer/aulas/ce083-2016-2/ex01_intro.html#" class="uri">http://leg.ufpr.br/~fernandomayer/aulas/ce083-2016-2/ex01_intro.html#</a> Exercícios do curso de estatistica computacional professor Fernando de Pol Mayer, (LEG: Laboratório de Estatística e Geoinformação).</p>
+<p>1 - O livro “Estatística Básica” de W. O. Bussab e P. A. Morettin traz no segundo capítulo um conjunto de dados hipotético de atributos de 36 funcionários da companhia “Milsa”. Este conjunto de dados está disponível em formato CSV. Com isso:</p>
+<p>1.1 - Faça a importação destes dados para o R.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 1. Faça a importação destes dados para o R.</span>
+milsa &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;Milsa.txt&quot;</span>, <span class="dt">header =</span> T, <span class="dt">sep =</span> <span class="st">&quot;&quot;</span>, <span class="dt">dec =</span> <span class="st">&quot;,&quot;</span>)</code></pre></div>
+<p>1.2 - Considerando a variável “estado civil” (Est.civil):</p>
+<p>1.2.1- Faça tabelas de frequência absoluta e relativa</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 2. Considerando a variável &quot;estado civil&quot; (`Est.civil`):</span>
+<span class="co"># a. Faça tabelas de frequência absoluta e relativa</span>
+<span class="kw">table</span>(milsa<span class="op">$</span>Est.civil)</code></pre></div>
+<pre><code>## 
+##   casado solteiro 
+##       20       16</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">prop.table</span>(<span class="kw">table</span>(milsa<span class="op">$</span>Est.civil))</code></pre></div>
+<pre><code>## 
+##    casado  solteiro 
+## 0.5555556 0.4444444</code></pre>
+<p>1.2.2- Faça um gráfico de barras e um de setores (“pizza”)</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># b. Faça um gráfico de barras e um de setores (&quot;pizza&quot;)</span>
+<span class="kw">barplot</span>(<span class="kw">table</span>(milsa<span class="op">$</span>Est.civil))</code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-35-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pie</span>(<span class="kw">table</span>(milsa<span class="op">$</span>Est.civil))</code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-36-1.png" width="672" /></p>
+<p>1.3- Considerando a variável “grau de instrução” (Inst):</p>
+<p>1.3.1 - Faça tabelas de frequência absoluta e relativa</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 3. Considerando a variável &quot;grau de instrução&quot; (`Inst`):</span>
+<span class="co"># a. Faça tabelas de frequência absoluta e relativa</span>
+<span class="kw">table</span>(milsa<span class="op">$</span>Inst)</code></pre></div>
+<pre><code>## 
+## ensino_fundamental       ensino_médio           superior 
+##                 12                 18                  6</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">prop.table</span>(<span class="kw">table</span>(milsa<span class="op">$</span>Inst))</code></pre></div>
+<pre><code>## 
+## ensino_fundamental       ensino_médio           superior 
+##          0.3333333          0.5000000          0.1666667</code></pre>
+<p>1.3.2 - Faça um gráfico de barras e um de setores (“pizza”)</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># b. Faça um gráfico de barras e um de setores (&quot;pizza&quot;)</span>
+<span class="kw">barplot</span>(<span class="kw">table</span>(milsa<span class="op">$</span>Inst))</code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-39-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pie</span>(<span class="kw">table</span>(milsa<span class="op">$</span>Inst))</code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-40-1.png" width="672" /></p>
+<p>1.4 - Considerando a variável “número de filhos” (Filhos):</p>
+<p>1.4.1 - Faça tabelas de frequência absoluta, relativa e acumulada</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 4. Considerando a variável &quot;número de filhos&quot; (`Filhos`):</span>
+<span class="co"># a. Faça tabelas de frequência absoluta, relativa e acumulada</span>
+
+<span class="kw">table</span>(milsa<span class="op">$</span>Filhos)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">prop.table</span>(<span class="kw">table</span>(milsa<span class="op">$</span>Filhos))</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cumsum</span>(<span class="kw">table</span>(milsa<span class="op">$</span>Filhos))</code></pre></div>
+<p>1.4.2 - Faça um gráfico com as frequências relativas e outro com as frequências relativas acumuladas</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># b. Faça um gráfico com as frequências relativas e outro com as</span>
+<span class="co"># frequências relativas acumuladas</span>
+<span class="kw">plot</span>(<span class="kw">prop.table</span>(<span class="kw">table</span>(milsa<span class="op">$</span>Filhos)))</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(<span class="kw">cumsum</span>(<span class="kw">prop.table</span>(<span class="kw">table</span>(milsa<span class="op">$</span>Filhos))), <span class="dt">type =</span> <span class="st">&quot;S&quot;</span>,
+     <span class="dt">axes =</span> <span class="ot">FALSE</span>)
+<span class="kw">axis</span>(<span class="dv">1</span>, <span class="dt">at =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="dt">labels =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>))
+<span class="kw">axis</span>(<span class="dv">2</span>)
+<span class="kw">box</span>()</code></pre></div>
+<p>1.5 - Considerando a variável “salário” (Salario):</p>
+<p>1.5.1 - Verifique os valores máximo e mínimo e qual seria o número adequado de classes para a construção de uma tabela de frequência para resumir esta variável</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 5. Considerando a variável &quot;salário&quot; (`Salario`):</span>
+<span class="co"># a. Verifique os valores máximo e mínimo e qual seria o número</span>
+<span class="co"># adequado de classes para a construção de uma tabela de</span>
+<span class="co"># frequência para resumir esta variável</span>
+<span class="kw">range</span>(milsa<span class="op">$</span>Salario)</code></pre></div>
+<pre><code>## [1]  4.0 23.3</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">nclass.Sturges</span>(milsa<span class="op">$</span>Salario)</code></pre></div>
+<pre><code>## [1] 7</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">classes &lt;-<span class="st"> </span><span class="kw">cut</span>(milsa<span class="op">$</span>Salario, <span class="dt">breaks =</span> <span class="kw">nclass.Sturges</span>(milsa<span class="op">$</span>Salario))</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">table</span>(classes)</code></pre></div>
+<p>1.5.2 - Faça um histograma</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># b. Faça um histograma</span>
+<span class="kw">hist</span>(milsa<span class="op">$</span>Salario)</code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-50-1.png" width="672" /></p>
+<p>1.6 -Considerando as variáveis “estado civil” (Est.civil) e “grau de instrução” (Inst):</p>
+<p>1.6.1 - Faça uma tabela de contingência para resumir o cruzamento destas duas variáveis</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 6. Considerando as variáveis &quot;estado civil&quot; (`Est.civil`) e &quot;grau de</span>
+<span class="co"># instrução&quot; (`Inst`):</span>
+<span class="co"># a. Faça uma tabela de contingência para resumir o cruzamento</span>
+<span class="co"># destas duas variáveis</span>
+tab &lt;-<span class="st"> </span><span class="kw">table</span>(milsa<span class="op">$</span>Est.civil, milsa<span class="op">$</span>Inst)</code></pre></div>
+<p>1.6.2 - A partir da tabela de contingância, faça um gráfico de barras (veja como ficam as barras sobrepostas e lado a lado)</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># b. A partir da tabela de contingância, faça um gráfico de barras</span>
+<span class="co"># (veja como ficam as barras sobrepostas e lado a lado)</span>
+<span class="kw">par</span>(<span class="dt">mfrow =</span> <span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>))
+<span class="kw">barplot</span>(tab, <span class="dt">legend =</span> <span class="ot">TRUE</span>)
+<span class="kw">barplot</span>(tab, <span class="dt">beside =</span> <span class="ot">TRUE</span>, <span class="dt">legend =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-52-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">par</span>(<span class="dt">mfrow =</span> <span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</code></pre></div>
+<p>1.7 - Considerando as variáveis “grau de instrução” (Inst) e “salário” (Salario):</p>
+<p>1.7.1 - Faça um boxplot para verificar a relação entre estas duas variáveis</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 7. Considerando as variáveis &quot;grau de instrução&quot; (`Inst`) e</span>
+<span class="co"># &quot;salário&quot; (`Salario`):</span>
+<span class="co"># a. Faça um *boxplot* para verificar a relação entre estas duas</span>
+<span class="co"># variáveis</span>
+<span class="kw">boxplot</span>(Salario <span class="op">~</span><span class="st"> </span>Inst, <span class="dt">data =</span> milsa)</code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-53-1.png" width="672" /></p>
+<p>1.7.2 - Calcule a média e o desvio-padrão dos salários para cada grau de instrução</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># b. Calcule a média e o desvio-padrão dos salários para cada grau</span>
+<span class="co"># de instrução</span>
+<span class="kw">with</span>(milsa, <span class="kw">tapply</span>(Salario, Inst, mean))</code></pre></div>
+<pre><code>## ensino_fundamental       ensino_médio           superior 
+##           7.836667          11.528333          16.475000</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">with</span>(milsa, <span class="kw">tapply</span>(Salario, Inst, sd))</code></pre></div>
+<pre><code>## ensino_fundamental       ensino_médio           superior 
+##           2.956464           3.715144           4.502438</code></pre>
+<p>1.8 - Considerando as variáveis Anos e Meses:</p>
+<p>1.8.1 Calcule a idade como Anos+Meses/12 (criando uma nova “coluna” chamada Idade)</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 8. Considerando as variáveis `Anos` e `Meses`:</span>
+<span class="co"># a. Calcule a idade como $\text{Anos} + \text{Meses}/12$ (criando</span>
+<span class="co"># uma nova &quot;coluna&quot; chamada `Idade`)</span>
+milsa<span class="op">$</span>Idade &lt;-<span class="st"> </span>milsa<span class="op">$</span>Anos <span class="op">+</span><span class="st"> </span>milsa<span class="op">$</span>Meses<span class="op">/</span><span class="dv">12</span></code></pre></div>
+<p>1.9 - Considerando as variáveis Salario e Idade:</p>
+<p>1.9.1 - Faça um gráfico para explorar a relação entre estas duas variáveis</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 9. Considerando as variáveis `Salario` e `Idade`:</span>
+<span class="co"># a. Faça um gráfico para explorar a relação entre estas duas</span>
+<span class="co"># variáveis</span>
+<span class="kw">plot</span>(Salario <span class="op">~</span><span class="st"> </span>Idade, <span class="dt">data =</span> milsa)</code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-57-1.png" width="672" /> 1.9.2 Calcule a correlação entre estas duas variáveis</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># b. Calcule a correlação entre estas duas variáveis</span>
+<span class="kw">cor</span>(milsa<span class="op">$</span>Idade, milsa<span class="op">$</span>Salario)</code></pre></div>
+<pre><code>## [1] 0.3651397</code></pre>
+<p>2 - Experimente as funções mean(), var(), sd(), median(), quantile() nos dados mostrados anteriormente (“milsa”). Veja a documentação das funções e as opções de uso.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Usando a variável Salario</span>
+<span class="kw">mean</span>(milsa<span class="op">$</span>Salario)</code></pre></div>
+<pre><code>## [1] 11.12222</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">var</span>(milsa<span class="op">$</span>Salario)</code></pre></div>
+<pre><code>## [1] 21.04477</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sd</span>(milsa<span class="op">$</span>Salario)</code></pre></div>
+<pre><code>## [1] 4.587458</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">median</span>(milsa<span class="op">$</span>Salario)</code></pre></div>
+<pre><code>## [1] 10.165</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">quantile</span>(milsa<span class="op">$</span>Salario)</code></pre></div>
+<pre><code>##      0%     25%     50%     75%    100% 
+##  4.0000  7.5525 10.1650 14.0600 23.3000</code></pre>
+</div>
+<div id="selecao-condicional" class="section level2">
+<h2><span class="header-section-number">3.2</span> Seleção Condicional</h2>
+<p><a href="http://leg.ufpr.br/~fernandomayer/aulas/ce083-2016-2/03_indexacao_e_selecao.html" class="uri">http://leg.ufpr.br/~fernandomayer/aulas/ce083-2016-2/03_indexacao_e_selecao.html</a> exemplos do curso de estatistica computacional professor Fernando de Pol Mayer, (LEG: Laboratório de Estatística e Geoinformação).</p>
+<div id="selecao-condicional-em-vetores" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> Seleção condicional em vetores</h3>
+<p>A seleção condicional serve para extrair dados que satisfaçam algum critério, usando expressões condicionais e operadores lógicos.</p>
+<p>Considere o seguinte vetor</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dados &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">5</span>, <span class="dv">15</span>, <span class="dv">42</span>, <span class="dv">28</span>, <span class="dv">79</span>, <span class="dv">4</span>, <span class="dv">7</span>, <span class="dv">14</span>)
+
+
+dados[dados <span class="op">&gt;</span><span class="st"> </span><span class="dv">15</span>]  <span class="co">#Selecione apenas os valores maiores do que 15:</span></code></pre></div>
+<pre><code>## [1] 42 28 79</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dados[dados <span class="op">&gt;</span><span class="st"> </span><span class="dv">15</span> <span class="op">&amp;</span><span class="st"> </span>dados <span class="op">&lt;=</span><span class="st"> </span><span class="dv">35</span>]  <span class="co">#Selecione os valores maiores que 15 E menores ou iguais a 35:</span></code></pre></div>
+<pre><code>## [1] 28</code></pre>
+<p>Para entender como funciona a seleção condicional, observe apenas o resultado da condição dentro do colchetes:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Usando &amp; (e)</span>
+dados <span class="op">&gt;</span><span class="st"> </span><span class="dv">15</span> <span class="op">&amp;</span><span class="st"> </span>dados <span class="op">&lt;=</span><span class="st"> </span><span class="dv">35</span></code></pre></div>
+<pre><code>## [1] FALSE FALSE FALSE  TRUE FALSE FALSE FALSE FALSE</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Usando | (ou)</span>
+dados <span class="op">&gt;</span><span class="st"> </span><span class="dv">15</span> <span class="op">|</span><span class="st"> </span>dados <span class="op">&lt;=</span><span class="st"> </span><span class="dv">35</span></code></pre></div>
+<pre><code>## [1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE</code></pre>
+<p>Os valores selecionados serão aqueles em que a condição for TRUE, nesse caso apenas o quarto elemento do vetor dados.</p>
+</div>
+<div id="a-funcao-which" class="section level3">
+<h3><span class="header-section-number">3.2.2</span> A função which()</h3>
+<p>Até agora vimos seleções condicionais que nos retornavam o resultado de uma expressão condicional em vetores. No entanto, muitas vezes estamos interessados em saber a posição do resultado de uma expressão condicional, ao invés do resultado em si.</p>
+<p>A fução which() retorna as posições dos elementos que retornarem TRUE em uma expressão condicional.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Elementos maiores de 15</span>
+dados[dados <span class="op">&gt;</span><span class="st"> </span><span class="dv">15</span>]</code></pre></div>
+<pre><code>## [1] 42 28 79</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">which</span>(dados <span class="op">&gt;</span><span class="st"> </span><span class="dv">15</span>)</code></pre></div>
+<pre><code>## [1] 3 4 5</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Elementos maiores de 15 e menores ou iguais a 35</span>
+dados[dados <span class="op">&gt;</span><span class="st"> </span><span class="dv">15</span> <span class="op">&amp;</span><span class="st"> </span>dados <span class="op">&lt;=</span><span class="st"> </span><span class="dv">35</span>]</code></pre></div>
+<pre><code>## [1] 28</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">which</span>(dados <span class="op">&gt;</span><span class="st"> </span><span class="dv">15</span> <span class="op">&amp;</span><span class="st"> </span>dados <span class="op">&lt;=</span><span class="st"> </span><span class="dv">35</span>)</code></pre></div>
+<pre><code>## [1] 4</code></pre>
+</div>
+<div id="selecao-condicional-em-data-frames" class="section level3">
+<h3><span class="header-section-number">3.2.3</span> Seleção condicional em data frames</h3>
+<p>Considere o seguinte data frame</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dados &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">ano =</span> <span class="kw">c</span>(<span class="dv">2001</span>, <span class="dv">2002</span>, <span class="dv">2003</span>, <span class="dv">2004</span>, <span class="dv">2005</span>),
+                    <span class="dt">captura =</span> <span class="kw">c</span>(<span class="dv">26</span>, <span class="dv">18</span>, <span class="dv">25</span>, <span class="dv">32</span>, <span class="ot">NA</span>),
+                    <span class="dt">porto =</span> <span class="kw">c</span>(<span class="st">&quot;SP&quot;</span>, <span class="st">&quot;RS&quot;</span>, <span class="st">&quot;SC&quot;</span>, <span class="st">&quot;SC&quot;</span>, <span class="st">&quot;RN&quot;</span>))</code></pre></div>
+<p>Extraia deste objeto apenas a linha correspondente ao ano 2004:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dados[dados<span class="op">$</span>ano <span class="op">==</span><span class="st"> </span><span class="dv">2004</span>, ]</code></pre></div>
+<pre><code>##    ano captura porto
+## 4 2004      32    SC</code></pre>
+<p>Mostre as linhas apenas do porto “SC”:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dados[dados<span class="op">$</span>porto <span class="op">==</span><span class="st"> &quot;SC&quot;</span>, ]</code></pre></div>
+<pre><code>##    ano captura porto
+## 3 2003      25    SC
+## 4 2004      32    SC</code></pre>
+<p>Observe as linhas onde a captura seja maior que 20, selecionando apenas a coluna captura:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dados[dados<span class="op">$</span>captura <span class="op">&gt;</span><span class="st"> </span><span class="dv">20</span>, <span class="st">&quot;captura&quot;</span>]</code></pre></div>
+<pre><code>## [1] 26 25 32 NA</code></pre>
+<p>Também exclua as linhas com NAs (agora com todas as colunas):</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dados[dados<span class="op">$</span>captura <span class="op">&gt;</span><span class="st"> </span><span class="dv">20</span> <span class="op">&amp;</span><span class="st"> </span><span class="op">!</span><span class="kw">is.na</span>(dados<span class="op">$</span>captura), ]</code></pre></div>
+<pre><code>##    ano captura porto
+## 1 2001      26    SP
+## 3 2003      25    SC
+## 4 2004      32    SC</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dados[dados<span class="op">$</span>captura <span class="op">&gt;</span><span class="st"> </span><span class="dv">20</span> <span class="op">&amp;</span><span class="st"> </span><span class="kw">complete.cases</span>(dados), ]</code></pre></div>
+<pre><code>##    ano captura porto
+## 1 2001      26    SP
+## 3 2003      25    SC
+## 4 2004      32    SC</code></pre>
+<p>A condição pode ser feita com diferentes colunas:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dados[dados<span class="op">$</span>captura <span class="op">&gt;</span><span class="st"> </span><span class="dv">25</span> <span class="op">&amp;</span><span class="st"> </span>dados<span class="op">$</span>porto <span class="op">==</span><span class="st"> &quot;SP&quot;</span>, ]</code></pre></div>
+<pre><code>##    ano captura porto
+## 1 2001      26    SP</code></pre>
+<p>A função subset() serve para os mesmos propósitos, e facilita todo o processo de seleção condicional:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dados[dados<span class="op">$</span>porto <span class="op">==</span><span class="st"> &quot;SC&quot;</span>, ]</code></pre></div>
+<pre><code>##    ano captura porto
+## 3 2003      25    SC
+## 4 2004      32    SC</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">subset</span>(dados, porto <span class="op">==</span><span class="st"> &quot;SC&quot;</span>)</code></pre></div>
+<pre><code>##    ano captura porto
+## 3 2003      25    SC
+## 4 2004      32    SC</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dados[dados<span class="op">$</span>captura <span class="op">&gt;</span><span class="st"> </span><span class="dv">20</span>, ]</code></pre></div>
+<pre><code>##     ano captura porto
+## 1  2001      26    SP
+## 3  2003      25    SC
+## 4  2004      32    SC
+## NA   NA      NA  &lt;NA&gt;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">subset</span>(dados, captura <span class="op">&gt;</span><span class="st"> </span><span class="dv">20</span>)</code></pre></div>
+<pre><code>##    ano captura porto
+## 1 2001      26    SP
+## 3 2003      25    SC
+## 4 2004      32    SC</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dados[dados<span class="op">$</span>captura <span class="op">&gt;</span><span class="st"> </span><span class="dv">20</span> <span class="op">&amp;</span><span class="st"> </span><span class="op">!</span><span class="kw">is.na</span>(dados<span class="op">$</span>captura), ]</code></pre></div>
+<pre><code>##    ano captura porto
+## 1 2001      26    SP
+## 3 2003      25    SC
+## 4 2004      32    SC</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dados[dados<span class="op">$</span>captura <span class="op">&gt;</span><span class="st"> </span><span class="dv">20</span>, <span class="st">&quot;captura&quot;</span>]</code></pre></div>
+<pre><code>## [1] 26 25 32 NA</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">subset</span>(dados, captura <span class="op">&gt;</span><span class="st"> </span><span class="dv">20</span>, <span class="dt">select =</span> captura)</code></pre></div>
+<pre><code>##   captura
+## 1      26
+## 3      25
+## 4      32</code></pre>
+</div>
+</div>
+<div id="exercicios" class="section level2">
+<h2><span class="header-section-number">3.3</span> Exercícios</h2>
+<p>1 - Você contou 42 caranguejos na Joaquina, 34 no Campeche, 59 na Armação, e 18 na Praia Mole. Crie um data frame para armazenar estas informações (número de caranguejos observados e local).</p>
+<p>2 - Com o data frame criado no exercício anterior, mostre qual a praia onde foram coletadas menos de 30 caranguejos (usando seleção condicional!).</p>
+<p>3- Crie uma nova coluna (região) neste data frame indicando que Joaquina e Praia Mole estão localizadas no leste da ilha (leste), e Campeche e Armação estão no sul (sul).</p>
+<p>4- Selecione as praias de região leste que possuem menos de 15 caranguejos contados.</p>
+<p>5- Você está interessado em saber em qual das duas praias do sul, o número de caranguejos contados foi maior do que 40. Usando a seleção condicional, mostre essa informação na tela.</p>
+<p>6- Qual região possui praias com mais de 40 caranguejos contados?</p>
+</div>
+<div id="condicoes-no-r" class="section level2">
+<h2><span class="header-section-number">3.4</span> Condições no R</h2>
+<p>Publicado em julho 22, 2015 por Leonardo Filgueira</p>
+<p>É muito comum ter que fazer algumas escolhas dada uma condição. Se alguma coisa for verdade, então iremos agir de uma maneira, caso seja mentira, então podemos agir de outra maneira. Assim também funciona o R. Nós podemos estabelecer algumas condições para que seja feita uma ou outra ação. Primeiramente veremos quais são os operadores para fazermos as condições.</p>
+<p>Operadores de comparação</p>
+<p>Igualdade: == Não igual: != Menor: &lt; Maior: &gt; Menor ou igual: &lt;= Maior ou igual: &gt;= Operadores lógicos</p>
+<p>E: &amp;&amp; Ou: ||</p>
+<p>Usando esses operadores podemos fazer as condições usando a função <code>if ()</code>. Podemos usá-la de algumas maneiras, dependendo da necessidade ou do nosso gosto. Quanto à estrutura, usaremos chaves para delimitar o código que estará condicionado pela função <code>if()</code>.</p>
+<p>Sintaxe:</p>
+<p>Se quisermos executar um determinado código apenas se a condição for verdadeira e se a condição for falsa, queremos que nada seja feito, então:</p>
+<p>`if (condição) {</p>
+<pre><code> Comandos a serem executados caso a condição nos parênteses seja verdadeira</code></pre>
+<p>}`</p>
+<p>Exemplo: Imprima o valor de da variável C, se nela o valor contido for menor que 5.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">C=<span class="dv">7</span>
+
+<span class="cf">if</span>(C<span class="op">&gt;</span><span class="dv">5</span>){ <span class="kw">print</span>(C)}</code></pre></div>
+<pre><code>## [1] 7</code></pre>
+<p>Se quisermos executar um determinado conjunto de código quando a condição for verdadeira e outro quando a condição for falsa, então:</p>
+<p>`if (condição) {</p>
+<pre><code> Comandos a serem executados caso a condição nos parênteses seja verdadeira</code></pre>
+<p>} else {</p>
+<p>Comandos a serem executados caso a condição nos parênteses seja falsa</p>
+<p>}`</p>
+<p>Exemplo: Imprimir o maior número, entre dois números.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a=<span class="dv">4</span>
+
+b=<span class="dv">6</span>
+
+<span class="cf">if</span> (a<span class="op">&gt;</span>b) {
+  
+  <span class="kw">print</span>(<span class="kw">paste</span>(<span class="st">&quot;o maior numero é&quot;</span>,a))
+  
+}<span class="cf">else</span>{
+  
+  <span class="kw">print</span>(<span class="kw">paste</span>(<span class="st">&quot;o maior numero é&quot;</span>,b))
+  
+}</code></pre></div>
+<pre><code>## [1] &quot;o maior numero é 6&quot;</code></pre>
+<p>Neste exemplo, o R imprimirá o valor da variável a apenas se a for maior que b. Caso contrário, imprimirá o valor da variável b.</p>
+<p>OBS.: O comando paste() tem a função de reunir vários elementos e imprimi-los em conjunto. Ele possui, basicamente, a mesma função que o print(). No exemplo usamos os dois, o que pode ser considerado redundante, mas que fique claro que não há problema ou erro nisso.</p>
+<p>Outra maneira de usarmos a função neste último caso é escrevermos ifelse ().</p>
+<p>Sintaxe:</p>
+<p>ifelse (Condição , comando executado caso a condição seja verdadeira , comando executado caso a condição seja falsa)</p>
+<p>Exemplo:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a=<span class="dv">4</span>
+
+b=<span class="dv">6</span>
+
+<span class="kw">ifelse</span> (a<span class="op">&gt;</span>b , <span class="kw">print</span> (<span class="kw">paste</span>(<span class="st">&quot;O maior número é:&quot;</span>,a)) , <span class="kw">print</span> (<span class="kw">paste</span>(<span class="st">&quot;O maior número é:&quot;</span>,b)))</code></pre></div>
+<pre><code>## [1] &quot;O maior número é: 6&quot;</code></pre>
+<pre><code>## [1] &quot;O maior número é: 6&quot;</code></pre>
+<p>Neste exemplo acontece exatamente a mesma coisa do exemplo anterior. A diferença está apenas na maneira de escrever a função.</p>
+<p>Agora que entendemos como funcionam condições no R, vejamos um exemplo um pouco mais complexo:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a=<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>
+
+b=<span class="dv">10</span><span class="op">:</span><span class="dv">20</span>
+
+<span class="cf">if</span> ( <span class="kw">length</span> (a) <span class="op">==</span><span class="st"> </span><span class="kw">length</span> (b) <span class="op">&amp;&amp;</span><span class="st"> </span>a [<span class="dv">1</span>]<span class="op">!=</span><span class="dv">0</span>  ) {
+
+     c =<span class="st"> </span>a<span class="op">*</span>b
+
+} <span class="cf">else</span> { 
+
+c =<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">100</span>
+
+}</code></pre></div>
+<p>Temos aqui dois vetores a e b, com comprimentos diferentes e o primeiro elemento de a é diferente de 0. A condição dada é que o comprimento (length) dos vetores seja igual e o primeiro elemento do vetor a não seja nulo. Como a primeira condição não é verdadeira, a (condição 1 e (&amp;&amp;) condição 2) é falsa, então o vetor c irá receber uma sequência entre 1 e 100.</p>
+</div>
+<div id="referencias-2" class="section level2">
+<h2><span class="header-section-number">3.5</span> Referências</h2>
+<p>Introdução ao uso do programa R - INPA PPGE - Victor lemes Landeiro</p>
+<p>R para cientistas sociais - Jackson Alves de Aquino</p>
+<p>Introdução à Linguagem R para Pós-Graduandos em Ecologia e áreas afins - <a href="http://ecologia.ib.usp.br/bie5782/doku.php?id=start" class="uri">http://ecologia.ib.usp.br/bie5782/doku.php?id=start</a></p>
+<p>Introductory Statistics with R - Peter Dalgaard</p>
+<p>R Core Team (2018). R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. URL <a href="https://www.R-project.org/" class="uri">https://www.R-project.org/</a>.</p>
+<p>Curso de estatistica computacional professor Fernando de Pol Mayer, (LEG: Laboratório de Estatística e Geoinformação).UFPR. <a href="http://leg.ufpr.br/~fernandomayer/aulas/ce083-2016-2/ex01_intro.html#" class="uri">http://leg.ufpr.br/~fernandomayer/aulas/ce083-2016-2/ex01_intro.html#</a>, <a href="http://leg.ufpr.br/~fernandomayer/aulas/ce083-2016-2/03_indexacao_e_selecao.html" class="uri">http://leg.ufpr.br/~fernandomayer/aulas/ce083-2016-2/03_indexacao_e_selecao.html</a></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="aula-2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="aula-4.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

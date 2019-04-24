@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>4 Aula 4 | Aprendendo R para economia e finanças</title>
+  <meta name="description" content="4 Aula 4 | Aprendendo R para economia e finanças">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="4 Aula 4 | Aprendendo R para economia e finanças" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4 Aula 4 | Aprendendo R para economia e finanças" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="aula-3.html">
+<link rel="next" href="aula-5.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introdução</a></li>
+<li class="chapter" data-level="1" data-path="aula-1.html"><a href="aula-1.html"><i class="fa fa-check"></i><b>1</b> Aula 1</a><ul>
+<li class="chapter" data-level="1.1" data-path="aula-1.html"><a href="aula-1.html#o-que-e-o-r"><i class="fa fa-check"></i><b>1.1</b> O que é o R?</a></li>
+<li class="chapter" data-level="1.2" data-path="aula-1.html"><a href="aula-1.html#instalando-r"><i class="fa fa-check"></i><b>1.2</b> Instalando R</a></li>
+<li class="chapter" data-level="1.3" data-path="aula-1.html"><a href="aula-1.html#o-r-como-calculadora"><i class="fa fa-check"></i><b>1.3</b> O R como calculadora</a></li>
+<li class="chapter" data-level="1.4" data-path="aula-1.html"><a href="aula-1.html#funcoes-do-r"><i class="fa fa-check"></i><b>1.4</b> Funções do R:</a><ul>
+<li class="chapter" data-level="1.4.1" data-path="aula-1.html"><a href="aula-1.html#exemplo-1"><i class="fa fa-check"></i><b>1.4.1</b> exemplo 1</a></li>
+<li class="chapter" data-level="1.4.2" data-path="aula-1.html"><a href="aula-1.html#exemplo-2"><i class="fa fa-check"></i><b>1.4.2</b> exemplo 2</a></li>
+<li class="chapter" data-level="1.4.3" data-path="aula-1.html"><a href="aula-1.html#algumas-funcoes-basicas-uteis"><i class="fa fa-check"></i><b>1.4.3</b> Algumas funções básicas úteis:</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="aula-1.html"><a href="aula-1.html#tipos-de-variaveis"><i class="fa fa-check"></i><b>1.5</b> TIPOS DE VARIÁVEIS</a></li>
+<li class="chapter" data-level="1.6" data-path="aula-1.html"><a href="aula-1.html#objetos-do-r-o-que-sao"><i class="fa fa-check"></i><b>1.6</b> Objetos do R (O que são?):</a><ul>
+<li class="chapter" data-level="1.6.1" data-path="aula-1.html"><a href="aula-1.html#acessar-valores-dentro-de-um-objeto-colchetes"><i class="fa fa-check"></i><b>1.6.1</b> Acessar valores dentro de um objeto [colchetes]</a></li>
+<li class="chapter" data-level="1.6.2" data-path="aula-1.html"><a href="aula-1.html#exemplo"><i class="fa fa-check"></i><b>1.6.2</b> exemplo:</a></li>
+</ul></li>
+<li class="chapter" data-level="1.7" data-path="aula-1.html"><a href="aula-1.html#matrizes"><i class="fa fa-check"></i><b>1.7</b> Matrizes</a></li>
+<li class="chapter" data-level="1.8" data-path="aula-1.html"><a href="aula-1.html#exercicios"><i class="fa fa-check"></i><b>1.8</b> Exercicios:</a></li>
+<li class="chapter" data-level="1.9" data-path="aula-1.html"><a href="aula-1.html#alguns-comandos-basicos-uteis"><i class="fa fa-check"></i><b>1.9</b> Alguns comandos básicos úteis:</a></li>
+<li class="chapter" data-level="1.10" data-path="aula-1.html"><a href="aula-1.html#referencias"><i class="fa fa-check"></i><b>1.10</b> Referências</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="aula-2.html"><a href="aula-2.html"><i class="fa fa-check"></i><b>2</b> Aula 2</a><ul>
+<li class="chapter" data-level="2.1" data-path="aula-2.html"><a href="aula-2.html#factor"><i class="fa fa-check"></i><b>2.1</b> Factor</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="aula-2.html"><a href="aula-2.html#exemplo-1-1"><i class="fa fa-check"></i><b>2.1.1</b> Exemplo 1</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="aula-2.html"><a href="aula-2.html#pacotes-packages"><i class="fa fa-check"></i><b>2.2</b> Pacotes (packages)</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="aula-2.html"><a href="aula-2.html#exemplo-2-1"><i class="fa fa-check"></i><b>2.2.1</b> exemplo 2</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="aula-2.html"><a href="aula-2.html#referencias-1"><i class="fa fa-check"></i><b>2.3</b> Referências</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="aula-3.html"><a href="aula-3.html"><i class="fa fa-check"></i><b>3</b> Aula 3</a><ul>
+<li class="chapter" data-level="3.1" data-path="aula-3.html"><a href="aula-3.html#estatistica-descritiva"><i class="fa fa-check"></i><b>3.1</b> Estatística descritiva</a></li>
+<li class="chapter" data-level="3.2" data-path="aula-3.html"><a href="aula-3.html#selecao-condicional"><i class="fa fa-check"></i><b>3.2</b> Seleção Condicional</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="aula-3.html"><a href="aula-3.html#selecao-condicional-em-vetores"><i class="fa fa-check"></i><b>3.2.1</b> Seleção condicional em vetores</a></li>
+<li class="chapter" data-level="3.2.2" data-path="aula-3.html"><a href="aula-3.html#a-funcao-which"><i class="fa fa-check"></i><b>3.2.2</b> A função which()</a></li>
+<li class="chapter" data-level="3.2.3" data-path="aula-3.html"><a href="aula-3.html#selecao-condicional-em-data-frames"><i class="fa fa-check"></i><b>3.2.3</b> Seleção condicional em data frames</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="aula-1.html"><a href="aula-1.html#exercicios"><i class="fa fa-check"></i><b>3.3</b> Exercícios</a></li>
+<li class="chapter" data-level="3.4" data-path="aula-3.html"><a href="aula-3.html#condicoes-no-r"><i class="fa fa-check"></i><b>3.4</b> Condições no R</a></li>
+<li class="chapter" data-level="3.5" data-path="aula-3.html"><a href="aula-3.html#referencias-2"><i class="fa fa-check"></i><b>3.5</b> Referências</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="aula-4.html"><a href="aula-4.html"><i class="fa fa-check"></i><b>4</b> Aula 4</a><ul>
+<li class="chapter" data-level="4.1" data-path="aula-4.html"><a href="aula-4.html#probabilidade-distribuicao-de-probabilidade-e-o-teste-t"><i class="fa fa-check"></i><b>4.1</b> Probabilidade, Distribuição de probabilidade e o teste t</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="aula-4.html"><a href="aula-4.html#probabilidade"><i class="fa fa-check"></i><b>4.1.1</b> Probabilidade</a></li>
+<li class="chapter" data-level="4.1.2" data-path="aula-4.html"><a href="aula-4.html#experimento-aleatorio"><i class="fa fa-check"></i><b>4.1.2</b> Experimento aleatório</a></li>
+<li class="chapter" data-level="4.1.3" data-path="aula-4.html"><a href="aula-4.html#ponto-amostral"><i class="fa fa-check"></i><b>4.1.3</b> Ponto amostral</a></li>
+<li class="chapter" data-level="4.1.4" data-path="aula-4.html"><a href="aula-4.html#espaco-amostral"><i class="fa fa-check"></i><b>4.1.4</b> Espaço amostral</a></li>
+<li class="chapter" data-level="4.1.5" data-path="aula-4.html"><a href="aula-4.html#evento"><i class="fa fa-check"></i><b>4.1.5</b> Evento</a></li>
+<li class="chapter" data-level="4.1.6" data-path="aula-4.html"><a href="aula-4.html#espacos-equiprovaveis"><i class="fa fa-check"></i><b>4.1.6</b> Espaços equiprováveis</a></li>
+<li class="chapter" data-level="4.1.7" data-path="aula-4.html"><a href="aula-4.html#calculo-de-probabilidades"><i class="fa fa-check"></i><b>4.1.7</b> Cálculo de probabilidades</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="aula-4.html"><a href="aula-4.html#combinatoria"><i class="fa fa-check"></i><b>4.2</b> Combinatória</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="aula-4.html"><a href="aula-4.html#fatorial"><i class="fa fa-check"></i><b>4.2.1</b> Fatorial</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="aula-4.html"><a href="aula-4.html#distribuicao-de-probabilidade"><i class="fa fa-check"></i><b>4.3</b> Distribuição de probabilidade</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="aula-4.html"><a href="aula-4.html#distribuicao"><i class="fa fa-check"></i><b>4.3.1</b> Distribuição</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="aula-4.html"><a href="aula-4.html#exercicios-1"><i class="fa fa-check"></i><b>4.4</b> Exercicios</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="aula-4.html"><a href="aula-4.html#consultoria-sobre-investimentos"><i class="fa fa-check"></i><b>4.4.1</b> Consultoria sobre investimentos</a></li>
+<li class="chapter" data-level="4.4.2" data-path="aula-4.html"><a href="aula-4.html#queda-na-bolsa"><i class="fa fa-check"></i><b>4.4.2</b> Queda na Bolsa</a></li>
+<li class="chapter" data-level="4.4.3" data-path="aula-4.html"><a href="aula-4.html#teste-t"><i class="fa fa-check"></i><b>4.4.3</b> Teste t</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="aula-4.html"><a href="aula-4.html#referencias-3"><i class="fa fa-check"></i><b>4.5</b> Referências</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="aula-5.html"><a href="aula-5.html"><i class="fa fa-check"></i><b>5</b> Aula 5</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Aprendendo R para economia e finanças</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="aula-4" class="section level1">
+<h1><span class="header-section-number">4</span> Aula 4</h1>
+<div id="probabilidade-distribuicao-de-probabilidade-e-o-teste-t" class="section level2">
+<h2><span class="header-section-number">4.1</span> Probabilidade, Distribuição de probabilidade e o teste t</h2>
+<div id="probabilidade" class="section level3">
+<h3><span class="header-section-number">4.1.1</span> Probabilidade</h3>
+<p>Probabilidade é o estudo das chances de ocorrência de um resultado, que são obtidas pela razão entre casos favoráveis e casos possíveis.</p>
+<p>Probabilidade é um ramo da Matemática em que as chances de ocorrência de experimentos são calculadas. É por meio de uma probabilidade, por exemplo, que podemos saber desde a chance de obter cara ou coroa no lançamento de uma moeda até a chance de erro em pesquisas.</p>
+<p>Para compreender esse ramo, é extremamente importante conhecer suas definições mais básicas, como a fórmula para o cálculo de probabilidades em espaços amostrais equiprováveis, probabilidade da união de dois eventos, probabilidade do evento complementar etc.</p>
+</div>
+<div id="experimento-aleatorio" class="section level3">
+<h3><span class="header-section-number">4.1.2</span> Experimento aleatório</h3>
+<p>É qualquer experiência cujo resultado não seja conhecido. Por exemplo: ao jogar uma moeda e observar a face superior, é impossível saber qual das faces da moeda ficará voltada para cima, exceto no caso em que a moeda seja viciada (modificada para ter um resultado mais frequentemente).</p>
+<p>Suponha que uma sacola de supermercado contenha maçãs verdes e vermelhas. Retirar uma maçã de dentro da sacola sem olhar também é um experimento aleatório.</p>
+</div>
+<div id="ponto-amostral" class="section level3">
+<h3><span class="header-section-number">4.1.3</span> Ponto amostral</h3>
+<p>Um ponto amostral é qualquer resultado possível em um experimento aleatório. Por exemplo: no lançamento de um dado, o resultado (o número que aparece na face superior) pode ser 1, 2, 3, 4, 5 ou 6. Então, cada um desses números é um ponto amostral desse experimento.</p>
+</div>
+<div id="espaco-amostral" class="section level3">
+<h3><span class="header-section-number">4.1.4</span> Espaço amostral</h3>
+<p>O espaço amostral é o conjunto formado por todos os pontos amostrais de um experimento aleatório, ou seja, por todos os seus resultados possíveis. Dessa maneira, o resultado de um experimento aleatório, mesmo que não seja previsível, sempre pode ser encontrado dentro do espaço amostral referente a ele.</p>
+<p>Como os espaços amostrais são conjuntos de resultados possíveis, utilizamos as representações de conjuntos para esses espaços. Por exemplo: O espaço amostral referente ao experimento “lançamento de um dado” é o conjunto <span class="math inline">\(\Omega\)</span>, tal que:</p>
+<p><span class="math inline">\(\Omega\)</span> = {1, 2, 3, 4, 5, 6}</p>
+<p>Esse conjunto também pode ser representado pelo diagrama de Venn ou, dependendo do experimento, por alguma lei de formação.</p>
+<p>O número de elementos dos espaços amostrais é representado por n(<span class="math inline">\(\Omega\)</span>). No caso do exemplo anterior, n(<span class="math inline">\(\Omega\)</span>) = 6. Lembre-se de que os elementos de um espaço amostral são pontos amostrais, ou seja, resultados possíveis de um experimento aleatório.</p>
+</div>
+<div id="evento" class="section level3">
+<h3><span class="header-section-number">4.1.5</span> Evento</h3>
+<p>Os eventos são subconjuntos de um espaço amostral. Um evento pode conter desde zero a todos os resultados possíveis de um experimento aleatório, ou seja, o evento pode ser um conjunto vazio ou o próprio espaço amostral. No primeiro caso, ele é chamado de evento impossível. No segundo, é chamado de evento certo.</p>
+<p>Ainda no experimento aleatório do lançamento de um dado, observe os seguintes eventos:</p>
+<p>A = Obter um número par: A = {2, 4, 6} e n(A) = 3</p>
+<p>B = Sair um número primo: B = {2, 3, 5} e n(B) = 3</p>
+<p>C = Sair um número maior ou igual a 5: C = {5, 6} e n(C)= 2</p>
+<p>D = Sair um número natural: D = {1, 2, 3, 4, 5, 6} e n(D) = 6</p>
+</div>
+<div id="espacos-equiprovaveis" class="section level3">
+<h3><span class="header-section-number">4.1.6</span> Espaços equiprováveis</h3>
+<p>Um espaço amostral é chamado equiprovável quando todos os pontos amostrais dentro dele têm a mesma chance de ocorrer. É o caso de lançamentos de dados ou de moedas não viciados, escolha de bolas numeradas de tamanho e peso idênticos etc.</p>
+<p>Um exemplo de espaço amostral que pode ser considerado não equiprovável é o formado pelo seguinte experimento: escolher entre tomar sorvete ou fazer caminhada.</p>
+</div>
+<div id="calculo-de-probabilidades" class="section level3">
+<h3><span class="header-section-number">4.1.7</span> Cálculo de probabilidades</h3>
+<p>As probabilidades são calculadas dividindo-se o número de resultados favoráveis pelo número de resultados possíveis, ou seja: <span class="math inline">\(P=\frac{n(E)}{n(\Omega)}\)</span></p>
+<p>Nesse caso, E é um evento que se quer conhecer a probabilidade, e <span class="math inline">\(\Omega\)</span> é o espaço amostral que o contém.</p>
+<p>Por exemplo, no lançamento de um dado, qual a probabilidade de sair o número um?</p>
+<p>Nesse exemplo, sair o número um é o evento E. Assim, n(E) = 1. O espaço amostral desse experimento contém seis elementos: 1, 2, 3, 4, 5 e 6. Logo, n(<span class="math inline">\(\Omega\)</span>) = 6. Desse modo: <span class="math display">\[ 
+P=\frac{n(E)}{n(\Omega)}  \to   P=\frac{n(1)}{n(6)}  \to   P=0,1666...
+\]</span></p>
+<p>Outro exemplo: qual a probabilidade de obtermos um número par no lançamento de um dado?</p>
+<p>Os números pares possíveis em um dado são 2, 4 e 6. Logo, n(E) = 3.</p>
+<p><span class="math display">\[ 
+P=\frac{n(E)}{n(\Omega)}  \to   P=\frac{n(3)}{n(6)}  \to P=0,5
+\]</span></p>
+<p>Observe que as probabilidades sempre resultarão em um número dentro do intervalo <span class="math inline">\(0 \le x\le 1\)</span>. Isso acontece porque E é um subconjunto de <span class="math inline">\(\Omega\)</span>. Dessa maneira, E pode conter desde zero até, no máximo, o mesmo número de elementos que <span class="math inline">\(\Omega\)</span>.</p>
+<p>digamos que você não esteja convecido que a probabilidade de sair uma face do dado seja de 1/6 e resolvar testar jogando o dado e anotando o valor da face. No R podemos fazer essa simulação.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dado &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;1&quot;</span>,<span class="st">&quot;2&quot;</span>,<span class="st">&quot;3&quot;</span>,<span class="st">&quot;4&quot;</span>,<span class="st">&quot;5&quot;</span>,<span class="st">&quot;6&quot;</span>)  <span class="co"># criando  o dado</span>
+<span class="kw">sample</span>(dado, <span class="dt">size =</span> <span class="dv">1</span>, <span class="dt">replace =</span> T)   <span class="co">#jogar o dado uma vez</span></code></pre></div>
+<pre><code>## [1] &quot;4&quot;</code></pre>
+<p>A função sample é utilizada para realizar amostras aleatórias e funciona assim: sample(x, size=1, replace = FALSE), onde x é o conjunto de dados do qual as amostras serão retiradas, size é o número de amostras e replace é onde você indica se a amostra deve ser feita com reposição (TRUE) ou sem reposição (FALSE).</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">jodas_<span class="dv">10</span> &lt;-<span class="st"> </span><span class="kw">sample</span>(dado, <span class="dt">size =</span> <span class="dv">10</span>, <span class="dt">replace =</span> T)       <span class="co">#jogar o dado 10 vezes</span>
+jodas_<span class="dv">100</span> &lt;-<span class="st"> </span><span class="kw">sample</span>(dado, <span class="dt">size =</span> <span class="dv">100</span>, <span class="dt">replace =</span> T)       <span class="co">#jogar o dado 100 vezes</span>
+jodas_<span class="dv">10000</span> &lt;-<span class="st"> </span><span class="kw">sample</span>(dado, <span class="dt">size =</span> <span class="dv">10000</span>, <span class="dt">replace =</span> T)    <span class="co">#jogar o dado 10.000 vezes</span>
+jodas_<span class="dv">100000</span> &lt;-<span class="st"> </span><span class="kw">sample</span>(dado, <span class="dt">size =</span> <span class="dv">100000</span>, <span class="dt">replace =</span> T)    <span class="co">#jogar o dado 100.000vezes</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))
+<span class="kw">barplot</span>(<span class="kw">table</span>(jodas_<span class="dv">10</span>), <span class="dt">main =</span> <span class="st">&quot;10 jogadas&quot;</span>)
+<span class="kw">barplot</span>(<span class="kw">table</span>(jodas_<span class="dv">100</span>), <span class="dt">main =</span> <span class="st">&quot;100 jogadas&quot;</span>)
+<span class="kw">barplot</span>(<span class="kw">table</span>(jodas_<span class="dv">10000</span>), <span class="dt">main =</span> <span class="st">&quot;10.000 jogadas&quot;</span>)
+<span class="kw">barplot</span>(<span class="kw">table</span>(jodas_<span class="dv">100000</span>), <span class="dt">main =</span> <span class="st">&quot;100.000 jogadas&quot;</span>)</code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-79-1.png" width="672" /></p>
+<p>Quando o experimento for executado repetidamente, os resultados individuais parecerão ocorrer de forma acidental. Contudo, quando o experimento for repetido um grande número de vezes, uma configuração definida ou regularidade surgirá. É esta regularidade que torna possível construir um modelo matemático preciso, com o qual se analisará o experimento.</p>
+<p>Por ora, o leitor necessita apenas pensar nas repetidas jogadas de uma moeda equilibrada. Muito embora caras e coroas apareçam sucessivamente, em uma maneira quase arbitrária, é fato empírico bem conhecido que, depois de um grande número de jogadas, a proporção de caras e a de coroas serão aproximadamente iguais.</p>
+<p>Outra situação: temos dados referentes a alunos matriculados em quatro cursos de uma universidade em dado ano.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">FACE&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;alunos.txt&quot;</span>, <span class="dt">sep =</span> <span class="st">&quot;&quot;</span>)</code></pre></div>
+<p>Vamos indicar por M o evento que ocorre quando, escolhendo-se ao acaso um aluno do conjunto desses quatro cursos, ele for um estudante de Matemática Pura. A, E, C, H e F têm significados análogos.</p>
+<p>Dessa maneira, qual a P(E)?</p>
+<p>Qual é a P(A <span class="math inline">\(\cap\)</span> H)?</p>
+</div>
+</div>
+<div id="combinatoria" class="section level2">
+<h2><span class="header-section-number">4.2</span> Combinatória</h2>
+<p>Calcula o número de combinações de n elementos em grupos de tamanho k.</p>
+<p>sintaxe:</p>
+<p>choose(n,k)</p>
+<p>Um administrador de um fundo de ações dispõe de ações de 10 empresas para a compra, entre elas as da empresa R e as da empresa S. a) De quantas maneiras ele poderá escolher 7 empresas, entre as 10?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">choose</span>(<span class="dv">10</span>,<span class="dv">7</span>)</code></pre></div>
+<pre><code>## [1] 120</code></pre>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Se entre as 7 empresas escolhidas devem figurar obrigatoriamente as empresas R e S, de quantas formas ele poderá escolher as empresas?</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">choose</span>(<span class="dv">8</span>,<span class="dv">5</span>)</code></pre></div>
+<pre><code>## [1] 56</code></pre>
+<div id="fatorial" class="section level3">
+<h3><span class="header-section-number">4.2.1</span> Fatorial</h3>
+<p>Calcula o fatorial de x.</p>
+<p>sintaxe:</p>
+<p>factorial(x)</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">factorial</span>(<span class="dv">5</span>)</code></pre></div>
+<pre><code>## [1] 120</code></pre>
+<hr />
+</div>
+</div>
+<div id="distribuicao-de-probabilidade" class="section level2">
+<h2><span class="header-section-number">4.3</span> Distribuição de probabilidade</h2>
+<p>Tal como nos modelos determinísticos, nos quais algumas relações funcionais desempenham importante papel (como por exemplo a linear, a quadrática, a exponencial, a trigonométrica etc.), também verificamos que, na construção de modelos não-determinísticos para fenômenos observáveis, algumas distribuições de probabilidade surgem mais freqüentemente que outras. Um motivo para isso é que, da mesma maneira que no caso determinístico, alguns modelos matemáticos relativamente simples parecem ser capazes de descrever uma classe bastante grande de fenômenos.</p>
+<p>Diversas situações reais muitas vezes se aproximam de certas distribuições estocásticas definidas por algumas hipóteses. Daí a importância de se conhecer e manipular algumas destas distribuições tão presentes em nosso cotidiano. Veja a lista abaixo com algumas funções para gerar valores amostrais de distribuições e seus respectivos parâmetros. Nos detalhes de cada função, os valores indicados (como por exemplo: mean=0, na distribuição normal) são os possíveis por definição (default), mas podem ser alterados pelo usuário ao seu bel prazer, já os que não estão indicados, significa que o parâmetro deve ser especificado pelo usuário.</p>
+<p>Adicionalmente, outras letras (p, d, q, além do r) adicionadas previamente ao código das distribuições podem ser usadas, com diferentes propósitos. Resumidamente temos:</p>
+<p>r: Gerador de números aleatórios. Requer argumentos especificando o tamanho da amostra, além dos parâmetros requeridos pela distribuição de interesse;</p>
+<p>p: Função de probabilidade. Requer um vetor de percentis, além dos parâmetros requeridos pela distribuição de interesse;</p>
+<p>d: Função densidade. Requer um vetor de percentis, além dos parâmetros requeridos pela distribuição de interesse;</p>
+<p>q: Função de percentis. Requer um vetor de probabilidades (0 &lt; p &lt; 1), além dos parâmetros requeridos pela distribuição de interesse.</p>
+<div id="distribuicao" class="section level3">
+<h3><span class="header-section-number">4.3.1</span> Distribuição</h3>
+<p><img src="dist1.JPG" alt="Distribuição Binomial, Poisson, Geometrica" /> <img src="dist2.JPG" alt="Distribuição Binomial, Poisson, Geometrica" /> <img src="dist3.JPG" alt="Distribuição Binomial, Poisson, Geometrica" /> <img src="dist4.JPG" alt="Distribuição Binomial, Poisson, Geometrica" /></p>
+</div>
+</div>
+<div id="exercicios-1" class="section level2">
+<h2><span class="header-section-number">4.4</span> Exercicios</h2>
+<div id="consultoria-sobre-investimentos" class="section level3">
+<h3><span class="header-section-number">4.4.1</span> Consultoria sobre investimentos</h3>
+<p>A diretoria da empresa X, especializada em aplicações na bolsa de valores, vai se reunir com o objetivo de tomar 10 importantes decisões sobre compra e venda de ações. São consideradas decisões acertadas, por exemplo: vender ações de uma companhia cuja cotação, posteriormente, venha a cair; comprar ações de uma companhia cuja cotação, posteriormente, venha a subir, etc. A diretoria estabeleceu uma meta a ser atingida: que sejam tomadas decisões corretas em pelo menos 8 desses 10 casos. Por outro lado, a experiência mostra que, diante de tais situações, a diretoria tem tomado decisões acertadas em cerca de 60% dos casos. Como desta vez as decisões a serem tomadas são consideradas fundamentais para a continuidade dos negócios da empresa X, está sendo cogitada a possibilidade de se contratar uma equipe de consultores, experts no mercado financeiro, para participarem dessa reunião. Acredita-se que, com a presença desses consultores, a margem de acerto nas decisões a serem tomadas aumentaria para cerca de 70%. Calcule a probabilidade de que a meta estabelecida seja atingida:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Sem a contratação dos consultores;</p></li>
+<li><p>Com a contratação dos consultores.</p></li>
+</ol>
+</div>
+<div id="queda-na-bolsa" class="section level3">
+<h3><span class="header-section-number">4.4.2</span> Queda na Bolsa</h3>
+<p>Você tem uma carteira com 15 ações. No pregão de ontem 75% das ações na bolsa de valores caíram de preço. Supondo que as ações que perderam valor têm distribuição binomial:</p>
+<p>Quantas ações da sua carteira você espera que tenham caído de preço?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="fl">0.75</span><span class="op">*</span><span class="dv">15</span></code></pre></div>
+<pre><code>## [1] 11.25</code></pre>
+<p>Qual o desvio padrão das ações que tem na carteira?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">n=<span class="dv">15</span>
+p=<span class="fl">0.75</span>
+<span class="kw">sqrt</span>(n<span class="op">*</span>p<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p))</code></pre></div>
+<pre><code>## [1] 1.677051</code></pre>
+<p>Qual a probabilidade que as 15 ações da carteira tenham caído?</p>
+<p><span class="math inline">\(P=(X=15) = {n\choose k} p^k q^{n-k} = {15\choose 15}0,75^{15}(1-0,75)^{15-15}=\frac{15!}{13!(15-15)!}(0,75)^{15}(0,25)^{0}=0,0134\)</span></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dbinom</span>(<span class="dv">15</span>, <span class="dv">15</span>, <span class="fl">0.75</span>)</code></pre></div>
+<pre><code>## [1] 0.01336346</code></pre>
+<p>Qual a probabilidade que tenham caído de preço exatamente 10 ações?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dbinom</span>(<span class="dv">10</span>,<span class="dv">15</span>,<span class="fl">0.75</span>)</code></pre></div>
+<pre><code>## [1] 0.165146</code></pre>
+<p>Qual a probabilidade que treze ou mais ações tenham caído de preço?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dbinom</span>(<span class="dv">13</span>,<span class="dv">15</span>,<span class="fl">0.75</span>)<span class="op">+</span><span class="kw">dbinom</span>(<span class="dv">14</span>,<span class="dv">15</span>,<span class="fl">0.75</span>)<span class="op">+</span><span class="kw">dbinom</span>(<span class="dv">15</span>,<span class="dv">15</span>,<span class="fl">0.75</span>)</code></pre></div>
+<pre><code>## [1] 0.2360878</code></pre>
+</div>
+<div id="teste-t" class="section level3">
+<h3><span class="header-section-number">4.4.3</span> Teste t</h3>
+<p>Em vez de procurar-se uma estimativa do parâmetro, freqüentemente nos parecerá conveniente admitir um valor tético para ele e, depois, utilizar a informação da amostra para afirmar ou rejeitar esse valor hipotético.</p>
+<p>Um teste t é um teste de hipótese da média de uma ou duas populações distribuídas normalmente. Existem diversos tipos de testes t para diferentes situações, mas todos usam uma estatística de teste que segue uma distribuição t sob a hipótese nula:</p>
+<p>Teste t para 1 amostra - Testa se a média de uma única população é igual a um valor alvo - A altura média das estudantes universitárias é maior que 1,65 m?</p>
+<p>Teste t para 2 amostras - Testa se a diferença entre as médias de duas populações independentes é igual a um valor alvo - A altura média das estudantes universitárias é significativamente diferente da altura média dos estudantes universitários?</p>
+<p>Teste t pareado - Testa se a média das diferenças entre observações independentes ou pareadas é igual a um valor alvo - Se você mede a altura de estudantes universitários do sexo masculino antes e depois que cada sujeito toma uma pílula para perder peso, a perda de peso média é suficientemente significante para concluir que a pílula funciona?</p>
+<p>Teste t na saída da regressão - Testa se os valores dos coeficientes na equação de regressão diferem significativamente de zero - As notas no vestibular constituem preditores significantes das notas na universidade?</p>
+<p>Uma propriedade importante do teste t é a sua robustez contra pressupostos de normalidade da população. Em outras palavras, com amostras grandes, os testes t são muitas vezes válidos mesmo quando o pressuposto de normalidade é violada. Esta propriedade os torna um dos procedimentos mais úteis para fazer inferências sobre médias da população.</p>
+<p>No entanto, com um tamanho amostral pequeno e não-normal e distribuições altamente assimétricas, talvez fosse mais apropriado utilizar testes não-paramétricos.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#Testa se as médias de duas variáveis são iguais. Muito utilizado para comparação de</span>
+<span class="co">#desempenho etc.</span>
+
+<span class="co">#  t.test(x, y, alternative, conf.level, paired)</span></code></pre></div>
+<p><span class="math display">\[H_0 :\mu_x = \mu_y \]</span></p>
+<p>Onde:</p>
+<p>x: Variável 1. Deve ser da classe “numeric”</p>
+<p>y: Variável 2. Deve ser da classe “numeric”</p>
+<p>alternative: Indica o tipo da hipótese alternativa. “two.sided”indica <span class="math inline">\(\mu_x = \mu_y\)</span>, “greater”indica <span class="math inline">\(\mu_x &gt; \mu_y\)</span>, “less”indica <span class="math inline">\(\mu_x &lt; \mu_y\)</span>. Por padrão alternative = “two.sided”.</p>
+<p>conf.level: Nível de confiança para o intervalo de confiança do teste. Por padrão conf.level = 0.95.</p>
+<p>paired: Indica se o teste é pareado ou não. Por padrão paired = FALSE.</p>
+<p>Pré-suposições: Para aplicação do teste T, algumas pré-suposições devem ser cumpridas, que são: As variâncias devem ser iguais. AS distribuições de probabilidade das variáveis devem ser normais.</p>
+<p>ou seja, para aplicarmos o teste T precisamos testar duas hipoteses antes, se as variáveis possuem a mesma variâancia e se são gaussianas.</p>
+</div>
+</div>
+<div id="referencias-3" class="section level2">
+<h2><span class="header-section-number">4.5</span> Referências</h2>
+<p>W. O. Bussab e P. A. Morettin (1987) - Estatística Básica - 4 Edição, Atual Editora</p>
+<p>P. L. Meyer (1983) - Probabilidade: Aplicações à Estatística, segunda edição, Livros técnicos e Científicos Editora</p>
+<p>Introdução ao uso do programa R - INPA PPGE - Victor lemes Landeiro</p>
+<p>Software Livre R: aplicação estatística - Emanuel Fernando Maia de Souza, Luiz Alexandre Peternelli, Márcio Pupin de Mello</p>
+<p>R para cientistas sociais - Jackson Alves de Aquino</p>
+<p>Introdução à Linguagem R para Pós-Graduandos em Ecologia e áreas afins - <a href="http://ecologia.ib.usp.br/" class="uri">http://ecologia.ib.usp.br/</a> bie5782/doku.php?id=start</p>
+<p>Introductory Statistics with R - Peter Dalgaard</p>
+<p><a href="https://brasilescola.uol.com.br/matematica/probabilidade.htm" class="uri">https://brasilescola.uol.com.br/matematica/probabilidade.htm</a></p>
+<p>R Core Team (2018). R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. URL <a href="https://www.R-project.org/" class="uri">https://www.R-project.org/</a>.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="aula-3.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="aula-5.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
